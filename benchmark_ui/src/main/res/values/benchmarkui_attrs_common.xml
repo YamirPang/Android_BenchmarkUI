@@ -19,6 +19,10 @@
 
     <attr name="benchmarkui_loading_margin_size" format="dimension" />
 
+    <attr name="chrysanthemum_loading_view_size" format="dimension" />
+
+    <attr name="chrysanthemum_dialog_min_size_phone" format="dimension" />
+
     <!--**********************************************
                           TextView
     ***********************************************-->
@@ -26,5 +30,23 @@
     <attr name="benchmarkui_config_size_explain_text" format="dimension" />
 
     <attr name="benchmarkui_config_color_explain_text" format="color" />
+
+    <!--**********************************************
+                         splash
+    **********************************************-->
+    <!--启动页背景-->
+    <attr name="benchmarkui_config_color_splash_bg" format="reference" />
+    <!--启动页上的应用图标-->
+    <attr name="benchmarkui_config_splash_app_logo" format="reference" />
+    <!--启动页上应用图标距离下端的距离-->
+    <attr name="benchmarkui_config_app_logo_bottom" format="dimension" />
+    <!--启动页上公司的标志-->
+    <attr name="benchmarkui_config_splash_company_logo" format="reference" />
+    <!--启动页上公司的标志距离下端的距离-->
+    <attr name="benchmarkui_config_company_logo_bottom" format="dimension" />
+
+    <attr name="benchmarkui_guide_btn_padding_horizontal" format="float" />
+    <attr name="benchmarkui_guide_btn_padding_vertical" format="float" />
+    <attr name="benchmarkui_guide_btn_margin_bottom" format="float" />
 
 </resources>

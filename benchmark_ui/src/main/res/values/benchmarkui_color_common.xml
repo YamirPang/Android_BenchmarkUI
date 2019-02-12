@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--*********************************************
+    *              Widget Color                     *
+    **********************************************-->
+
+    <color name="config_color_light_blue">#299EE3</color>
+
+    <color name="benchmarkui_config_color_light_blue_gray">#9FABBC</color>
+
+    <color name="benchmarkui_config_font_color_gray">#8a8a8a</color>
+
+    <color name="benchmarkui_config_font_color_black">#4E4E4E</color>
+
+
+    <!--*********************************************
+    *              Config Color                     *
+    **********************************************-->
+    <color name="config_color_main_theme">@color/config_color_light_blue</color>
+
+    <color name="config_color_white">#FFFFFF</color>
+</resources>

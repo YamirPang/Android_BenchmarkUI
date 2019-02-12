@@ -6,13 +6,14 @@
         android:id="@+id/arc_loading_view"
         android:layout_width="?attr/benchmarkui_loading_view_size"
         android:layout_height="?attr/benchmarkui_loading_view_size"
-        app:lv_auto="false"
+        app:lv_auto="true"
         app:lv_width="?attr/benchmarkui_loading_view_width" />
 
     <TextView
         android:id="@+id/tv_tip_message"
         style="@style/TextStyle.Explain"
-        android:layout_marginTop="?attr/benchmarkui_loading_margin_size"
         android:text="@string/tip_loading_message" />
+
+    <!--android:layout_marginTop="?attr/benchmarkui_loading_margin_size"-->
 
 </merge>

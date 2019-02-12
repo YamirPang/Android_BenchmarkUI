@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--**********************************************
+                     splash view
+    ***********************************************-->
+    <dimen name="config_app_logo_bottom">250dp</dimen>
+    <dimen name="config_company_logo_bottom">80dp</dimen>
+
+    <!--**********************************************
+                        Dialog
+    ***********************************************-->
+
+    <dimen name="benchmarkui_dialog_radius_size_phone">7dp</dimen>
+    <dimen name="benchmarkui_dialog_loading_padding_size_phone">26dp</dimen>
+    <dimen name="benchmarkui_dialog_loading_min_size_phone">70dp</dimen>
+    <dimen name="benchmarkui_loading_view_size_phone">78dp</dimen>
+    <dimen name="benchmarkui_loading_view_width_phone">4dp</dimen>
+    <dimen name="benchmarkui_loading_margin_size_phone">6dp</dimen>
+
+    <dimen name="loading_view_size_phone">20dp</dimen>
+
+    <dimen name="benchmarkui_chrysanthemum_dialog_min_size_phone">35dp</dimen>
+
+    <!--*********************************************
+    *                  Text Size                    *
+    **********************************************-->
+    <dimen name="benchmarkui_config_size_explain_text_phone">14sp</dimen>
+
+    <!-- 提示标点 -->
+    <dimen name="benchmarkui_tips_point_size">8dp</dimen>
+
+</resources>
