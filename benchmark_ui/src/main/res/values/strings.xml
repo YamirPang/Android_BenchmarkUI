@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Benchmark_UI</string>
+
+    <!--*********************************************
+                        LoadingView
+     **********************************************-->
+
+    <string name="tip_loading_message">加载中...</string>
+
+</resources>

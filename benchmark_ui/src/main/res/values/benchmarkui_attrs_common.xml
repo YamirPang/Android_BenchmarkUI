@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--**********************************************
+                     Dialog /Loading
+    ***********************************************-->
+
+    <attr name="benchmarkui_dialog_background_dim_amount" format="float" />
+
+    <attr name="benchmarkui_dialog_radius_size" type="attr" />
+
+    <attr name="benchmarkui_dialog_loading_min_size" format="dimension" />
+
+    <attr name="benchmarkui_dialog_loading_padding_size" format="dimension" />
+
+    <attr name="benchmarkui_loading_view_size" format="dimension" />
+
+    <attr name="benchmarkui_loading_view_width" format="dimension" />
+
+    <attr name="benchmarkui_loading_margin_size" format="dimension" />
+
+    <!--**********************************************
+                          TextView
+    ***********************************************-->
+
+    <attr name="benchmarkui_config_size_explain_text" format="dimension" />
+
+    <attr name="benchmarkui_config_color_explain_text" format="color" />
+
+</resources>

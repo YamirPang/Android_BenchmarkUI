@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/benchmarkui_loading_bg_radius_color_white"
+    android:gravity="center"
+    android:minHeight="?attr/benchmarkui_dialog_loading_min_size"
+    android:minWidth="?attr/benchmarkui_dialog_loading_min_size"
+    android:orientation="vertical"
+    android:padding="?attr/benchmarkui_dialog_loading_padding_size">
+
+    <include layout="@layout/benchmarkui_loading_view" />
+
+</LinearLayout>
