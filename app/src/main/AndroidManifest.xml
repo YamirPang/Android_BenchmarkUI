@@ -10,12 +10,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".module.loading.ui.LoadingActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".module.photopicker.ui.PhotoPickerActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

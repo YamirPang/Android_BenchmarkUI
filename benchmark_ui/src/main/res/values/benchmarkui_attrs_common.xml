@@ -49,4 +49,137 @@
     <attr name="benchmarkui_guide_btn_padding_vertical" format="float" />
     <attr name="benchmarkui_guide_btn_margin_bottom" format="float" />
 
+    <!--**********************************************
+    *                  xui btn                      *
+    **********************************************-->
+    <!-- android 5.0以下不能再selector中用?attr,必须要整个drawable由使用者提供 -->
+    <attr name="benchmarkui_round_btn_bg_color" format="color" />
+    <attr name="benchmarkui_round_btn_border_color" format="color" />
+    <attr name="benchmarkui_round_btn_text_color" format="color" />
+
+    <attr name="benchmarkui_btn_view_radius" format="dimension" />
+    <attr name="benchmarkui_btn_view_width" format="dimension" />
+    <attr name="benchmarkui_btn_view_height" format="dimension" />
+    <attr name="benchmarkui_btn_view_text_size" format="dimension" />
+    <attr name="benchmarkui_btn_view_border_width" format="dimension" />
+
+    <attr name="benchmarkui_config_icon_drawable_padding" format="dimension" />
+
+    <attr name="benchmarkui_config_content_spacing_horizontal" format="dimension" /> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+    <attr name="benchmarkui_config_content_spacing_vertical" format="dimension" /> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
+    <attr name="benchmarkui_config_simple_list_item_height" format="dimension" />
+    <attr name="benchmarkui_config_simple_list_icon_size" format="dimension" />
+
+    <!-- 自定义按钮控件 ButtonView -->
+    <declare-styleable name="ButtonView">
+        <!-- 按钮的填充颜色，默认Color.TRANSPARENT -->
+        <attr name="textSolidColor" format="color" />
+        <!-- 按钮的选中颜色，默认Color.TRANSPARENT -->
+        <attr name="textSelectedSolidColor" format="color" />
+        <!-- 按钮的边框颜色，默认Color.TRANSPARENT -->
+        <attr name="textStrokeColor" format="color" />
+        <!-- 按钮的边框的宽度，默认0-->
+        <attr name="textStrokeWidth" format="dimension" />
+        <!-- 按钮的边角角度，默认0 -->
+        <attr name="textRadius" format="dimension" />
+        <attr name="textLeftTopRadius" format="dimension" />
+        <attr name="textLeftBottomRadius" format="dimension" />
+        <attr name="textRightTopRadius" format="dimension" />
+        <attr name="textRightBottomRadius" format="dimension" />
+        <!-- 按钮的图标 -->
+        <attr name="textDrawable" format="reference" />
+        <!-- 按钮的文字的颜色，默认Color.TRANSPARENT-->
+        <attr name="textNormalTextColor" format="color" />
+        <!-- 按钮的文字点击时的颜色，默认Color.TRANSPARENT-->
+        <attr name="textSelectedTextColor" format="color" />
+    </declare-styleable>
+
+    <!-- 圆形按钮 -->
+    <declare-styleable name="RoundButton">
+        <!-- 背景颜色-->
+        <attr name="rb_backgroundColor" format="reference" />
+        <!-- 边框颜色 -->
+        <attr name="rb_borderColor" format="reference" />
+        <!-- 边框宽度，默认1dp -->
+        <attr name="rb_borderWidth" format="dimension" />
+        <attr name="rb_isRadiusAdjustBounds" format="boolean" />
+        <!-- 圆角弧度，默认5dp -->
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_radiusTopLeft" format="dimension" />
+        <attr name="rb_radiusTopRight" format="dimension" />
+        <attr name="rb_radiusBottomLeft" format="dimension" />
+        <attr name="rb_radiusBottomRight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SuperButton">
+        <attr name="sGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+
+        <attr name="sShapeType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="sSolidColor" format="color" />
+
+        <attr name="sSelectorPressedColor" format="color" />
+        <attr name="sSelectorDisableColor" format="color" />
+        <attr name="sSelectorNormalColor" format="color" />
+
+        <attr name="sCornersRadius" format="dimension" />
+
+        <attr name="sCornersTopLeftRadius" format="dimension" />
+        <attr name="sCornersTopRightRadius" format="dimension" />
+        <attr name="sCornersBottomLeftRadius" format="dimension" />
+        <attr name="sCornersBottomRightRadius" format="dimension" />
+
+        <attr name="sStrokeWidth" format="dimension" />
+        <attr name="sStrokeDashWidth" format="dimension" />
+        <attr name="sStrokeDashGap" format="dimension" />
+        <attr name="sStrokeColor" format="color" />
+
+        <attr name="sSizeWidth" format="dimension" />
+        <attr name="sSizeHeight" format="dimension" />
+
+        <attr name="sGradientOrientation" format="enum">
+            <enum name="TOP_BOTTOM" value="0" />
+            <enum name="TR_BL" value="1" />
+            <enum name="RIGHT_LEFT" value="2" />
+            <enum name="BR_TL" value="3" />
+            <enum name="BOTTOM_TOP" value="4" />
+            <enum name="BL_TR" value="5" />
+            <enum name="LEFT_RIGHT" value="6" />
+            <enum name="TL_BR" value="7" />
+        </attr>
+
+        <attr name="sGradientAngle" format="dimension" />
+        <attr name="sGradientCenterX" format="dimension" />
+        <attr name="sGradientCenterY" format="dimension" />
+        <attr name="sGradientGradientRadius" format="dimension" />
+        <attr name="sGradientStartColor" format="color" />
+        <attr name="sGradientCenterColor" format="color" />
+        <attr name="sGradientEndColor" format="color" />
+        <attr name="sGradientUseLevel" format="boolean" />
+
+        <attr name="sUseSelector" format="boolean" />
+
+        <attr name="sGradientType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <!--**********************************************
+                       list item bg
+    **********************************************-->
+    <attr name="benchmarkui_config_separator_height" format="dimension" />
 </resources>

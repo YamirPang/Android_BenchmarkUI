@@ -25,6 +25,7 @@ android {
             jniLibs.srcDir 'libs'
             res.srcDirs =
                     [
+                            'src/main/res/layouts/photopicker',
                             'src/main/res/layouts/common',
                             'src/main/res/layouts/popupwindow',
                             'src/main/res/layouts/loading',
@@ -43,4 +44,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api "com.github.bumptech.glide:glide:4.8.0"
+
+    api 'com.android.support:appcompat-v7:27.1.0'
+    api 'com.android.support:recyclerview-v7:27.1.0'
+    api 'com.android.support:design:27.1.0'
 }

@@ -21,6 +21,13 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
 
+        <!--**********************************************
+                           benchmarkui_round_btn
+    ***********************************************-->
+        <item name="benchmarkui_round_btn_bg_color">@color/benchmarkui_transparent</item>
+        <item name="benchmarkui_round_btn_border_color">@color/benchmarkui_default_round_btn_blue_border</item>
+        <item name="benchmarkui_round_btn_text_color">@color/benchmarkui_default_round_btn_blue_text</item>
+
     </style>
 
     <style name="BM_UI_Theme" parent="RootTheme" />
@@ -54,6 +61,51 @@
 
         <item name="benchmarkui_config_size_explain_text">@dimen/benchmarkui_config_size_explain_text_phone</item>
         <item name="benchmarkui_config_color_explain_text">@color/benchmarkui_config_font_color_gray</item>
+
+        <!--*********************************************
+        *                  Button                       *
+        **********************************************-->
+        <!--按钮样式-->
+        <item name="benchmarkui_btn_view_radius">@dimen/default_btn_view_radius_phone</item>
+        <item name="benchmarkui_btn_view_width">@dimen/default_btn_view_width_phone</item>
+        <item name="benchmarkui_btn_view_height">@dimen/default_btn_view_height_phone</item>
+        <item name="benchmarkui_btn_view_text_size">@dimen/default_btn_view_text_size_phone</item>
+        <item name="benchmarkui_btn_view_border_width">@dimen/default_btn_view_border_width_phone</item>
+        <item name="benchmarkui_config_icon_drawable_padding">@dimen/benchmarkui_config_icon_drawable_padding_phone</item>
+        <item name="benchmarkui_guide_btn_padding_horizontal">@dimen/benchmarkui_guide_btn_padding_horizontal_phone</item>
+        <item name="benchmarkui_guide_btn_padding_vertical">@dimen/benchmarkui_guide_btn_padding_vertical_phone</item>
+        <item name="benchmarkui_guide_btn_margin_bottom">@dimen/benchmarkui_guide_btn_margin_bottom_phone</item>
+
+        <item name="benchmarkui_config_content_spacing_horizontal">@dimen/benchmarkui_config_content_spacing_horizontal_phone</item>
+        <item name="benchmarkui_config_content_spacing_vertical">@dimen/benchmarkui_config_content_spacing_vertical_phone</item>
+        <item name="benchmarkui_config_simple_list_item_height">@dimen/benchmarkui_config_simple_list_item_height_phone</item>
+        <item name="benchmarkui_config_simple_list_icon_size">@dimen/benchmarkui_config_simple_list_icon_size_phone</item>
+        <item name="benchmarkui_config_separator_height">@dimen/benchmarkui_config_separator_height_phone</item>
     </style>
 
+    <!--*********************************************
+     *                  按钮样式                    *
+     **********************************************-->
+    <style name="ImageButton" parent="ImageButtonBase">
+        <item name="android:background">@color/benchmarkui_config_color_transparent</item>
+    </style>
+
+    <style name="Button" parent="ButtonBase"/>
+
+    <!--**********************************************
+        *                  BaseStyle                    *
+        **********************************************-->
+    <style name="ActionBarBase" parent="android:Widget.Holo.Light.ActionBar" />
+    <style name="ActionBarTitleTextBase" parent="android:TextAppearance.Holo.Widget.ActionBar.Title" />
+    <style name="ListViewBase" parent="android:Widget.Holo.Light.ListView">
+        <item name="android:background">@color/benchmarkui_config_color_transparent</item>
+        <item name="android:listSelector">@drawable/benchmarkui_config_selectable_item_selector</item>
+    </style>
+    <style name="GridViewBase" parent="android:Widget.Holo.Light.GridView" />
+    <style name="ImageButtonBase" parent="android:Widget.Holo.Light.ImageButton" />
+    <style name="ButtonBase" parent="android:Widget.Holo.Light.Button"/>
+    <style name="EditTextBase" parent="android:Widget.Holo.Light.EditText" />
+    <style name="AutoCompleteTextViewBase" parent="android:Widget.Holo.Light.AutoCompleteTextView" />
+    <style name="DropDownListViewBase" parent="android:Widget.Holo.Light.ListView.DropDown" />
+    <style name="TextAppearanceBase" parent="android:TextAppearance.Holo"/>
 </resources>

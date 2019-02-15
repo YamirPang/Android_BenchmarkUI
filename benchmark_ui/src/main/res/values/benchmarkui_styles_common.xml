@@ -51,4 +51,174 @@
         <item name="android:textColor">?attr/benchmarkui_config_color_explain_text</item>
     </style>
 
+    <!--*********************************************
+    *                CommonButtonStyle              *
+    **********************************************-->
+    <style name="Button.Style" parent="@style/Button">
+        <item name="android:layout_width">?attr/benchmarkui_btn_view_width</item>
+        <item name="android:layout_height">?attr/benchmarkui_btn_view_height</item>
+        <item name="android:textSize">?attr/benchmarkui_btn_view_text_size</item>
+        <item name="android:textColor">@color/benchmarkui_config_color_white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button.Blue" parent="Button.Style">
+        <item name="android:background">@drawable/benchmarkui_config_bg_blue_btn</item>
+    </style>
+
+    <style name="Button.Blue.wrap">
+        <item name="android:paddingLeft">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:layout_height">?attr/benchmarkui_btn_view_height</item>
+    </style>
+
+    <style name="Button.Radius" parent="@style/Button">
+        <item name="android:layout_height">?attr/benchmarkui_btn_view_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:background">@drawable/rb_bg_selector</item>
+        <item name="android:textColor">?attr/benchmarkui_round_btn_text_color</item>
+        <item name="android:textSize">?attr/benchmarkui_btn_view_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--*********************************************
+    *                 ButtonViewStyle               *
+    **********************************************-->
+    <!-- Button style -->
+    <style name="ButtonStyle">
+        <item name="android:layout_width">?attr/benchmarkui_btn_view_width</item>
+        <item name="android:layout_height">?attr/benchmarkui_btn_view_height</item>
+        <item name="android:textSize">?attr/benchmarkui_btn_view_text_size</item>
+        <item name="android:textColor">@color/benchmarkui_config_color_white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonView" parent="ButtonStyle">
+        <item name="textRadius">?attr/benchmarkui_btn_view_radius</item>
+    </style>
+
+    <!-- Green Button Style -->
+    <style name="ButtonView.Green">
+        <item name="textSolidColor">@color/benchmarkui_btn_green_normal_color</item>
+        <item name="textSelectedSolidColor">@color/benchmarkui_btn_green_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_submit</item>
+    </style>
+
+    <!-- Blue Button Style -->
+    <style name="ButtonView.Blue">
+        <item name="textSolidColor">@color/benchmarkui_btn_blue_normal_color</item>
+        <item name="textSelectedSolidColor">@color/benchmarkui_btn_blue_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_reset</item>
+    </style>
+
+    <!-- Gray Button Style -->
+    <style name="ButtonView.Gray">
+        <item name="textSolidColor">@color/benchmarkui_btn_gray_normal_color</item>
+        <item name="textSelectedSolidColor">@color/benchmarkui_btn_gray_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_cancel</item>
+    </style>
+
+    <!--*********************************************
+    *                SuperButtonStyle               *
+    **********************************************-->
+    <!-- Button style -->
+    <style name="SuperButton" parent="ButtonStyle">
+        <item name="sCornersRadius">?attr/benchmarkui_btn_view_radius</item>
+        <item name="sSelectorDisableColor">@color/benchmarkui_btn_disable_color</item>
+        <item name="sUseSelector">true</item>
+    </style>
+
+    <!-- IconButton style -->
+    <style name="SuperButton.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/benchmarkui_config_icon_drawable_padding</item>
+    </style>
+
+    <!-- Green Button Style -->
+    <style name="SuperButton.Green">
+        <item name="sSelectorNormalColor">@color/benchmarkui_btn_green_normal_color</item>
+        <item name="sSelectorPressedColor">@color/benchmarkui_btn_green_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_submit</item>
+    </style>
+
+    <!-- Green Icon Button Style -->
+    <style name="SuperButton.Green.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/benchmarkui_config_icon_drawable_padding</item>
+    </style>
+
+    <!-- Blue Button Style -->
+    <style name="SuperButton.Blue">
+        <item name="sSelectorNormalColor">@color/benchmarkui_btn_blue_normal_color</item>
+        <item name="sSelectorPressedColor">@color/benchmarkui_btn_blue_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_reset</item>
+    </style>
+
+    <!-- Blue Icon Button Style -->
+    <style name="SuperButton.Blue.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/benchmarkui_config_icon_drawable_padding</item>
+    </style>
+
+    <!-- Gray Button Style -->
+    <style name="SuperButton.Gray">
+        <item name="sSelectorNormalColor">@color/benchmarkui_btn_gray_normal_color</item>
+        <item name="sSelectorPressedColor">@color/benchmarkui_btn_gray_select_color</item>
+        <item name="android:text">@string/benchmarkui_lab_button_cancel</item>
+    </style>
+
+    <!-- Gray Icon Button Style -->
+    <style name="SuperButton.Gray.Icon">
+        <item name="sGravity">left</item>
+        <item name="android:drawablePadding">?attr/benchmarkui_config_icon_drawable_padding</item>
+    </style>
+
+    <!--*********************************************
+    *                RoundButtonStyle               *
+    **********************************************-->
+    <style name="RoundButton" parent="@style/Button">
+        <item name="android:layout_width">?attr/benchmarkui_btn_view_width</item>
+        <item name="android:layout_height">?attr/benchmarkui_btn_view_height</item>
+        <item name="android:textSize">?attr/benchmarkui_btn_view_text_size</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:ellipsize">end</item>
+        <item name="rb_isRadiusAdjustBounds">false</item>
+        <item name="rb_radius">?attr/benchmarkui_btn_view_radius</item>
+        <item name="rb_borderWidth">?attr/benchmarkui_btn_view_border_width</item>
+
+        <item name="rb_backgroundColor">?attr/benchmarkui_round_btn_bg_color</item>
+        <item name="rb_borderColor">?attr/benchmarkui_round_btn_border_color</item>
+        <item name="android:textColor">?attr/benchmarkui_round_btn_text_color</item>
+    </style>
+
+    <style name="RoundButton.Auto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/benchmarkui_config_content_spacing_horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="RoundButton.Green">
+        <item name="rb_backgroundColor">@color/benchmarkui_default_round_btn_green_bg</item>
+        <item name="rb_borderWidth">0dp</item>
+        <item name="android:text">@string/benchmarkui_lab_button_submit</item>
+        <item name="android:textColor">@color/benchmarkui_default_round_btn_white_text</item>
+    </style>
+
+    <style name="RoundButton.Blue">
+        <item name="rb_backgroundColor">@color/benchmarkui_default_round_btn_blue_bg</item>
+        <item name="rb_borderWidth">0dp</item>
+        <item name="android:text">@string/benchmarkui_lab_button_reset</item>
+        <item name="android:textColor">@color/benchmarkui_default_round_btn_white_text</item>
+    </style>
+
+    <style name="RoundButton.Gray">
+        <item name="rb_backgroundColor">@color/benchmarkui_default_round_btn_gray_bg</item>
+        <item name="rb_borderWidth">0dp</item>
+        <item name="android:text">@string/benchmarkui_lab_button_cancel</item>
+        <item name="android:textColor">@color/benchmarkui_default_round_btn_white_text</item>
+    </style>
+
 </resources>

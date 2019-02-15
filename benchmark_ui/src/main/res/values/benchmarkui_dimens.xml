@@ -30,4 +30,46 @@
     <!-- 提示标点 -->
     <dimen name="benchmarkui_tips_point_size">8dp</dimen>
 
+    <!--**********************************************
+                     Photo Picker
+    ***********************************************-->
+    <dimen name="__picker_iwf_actionBarSize">48dip</dimen>
+    <dimen name="__picker_item_photo_size">80dip</dimen>
+    <dimen name="__picker_item_camera_size">80dip</dimen>
+    <dimen name="__picker_item_directory_height">80dp</dimen>
+
+    <!--**********************************************
+                         Button
+        ***********************************************-->
+    <dimen name="default_btn_view_radius_phone">5dp</dimen>
+    <dimen name="default_btn_view_width_phone">104dp</dimen>
+    <dimen name="default_btn_view_height_phone">32dp</dimen>
+    <dimen name="default_btn_view_text_size_phone">13sp</dimen>
+    <dimen name="default_btn_view_border_width_phone">0.5dp</dimen>
+
+    <dimen name="benchmarkui_config_icon_drawable_padding_phone">7dp</dimen>
+    <dimen name="benchmarkui_guide_btn_padding_horizontal_phone">30dp</dimen>
+    <dimen name="benchmarkui_guide_btn_padding_vertical_phone">8dp</dimen>
+    <dimen name="benchmarkui_guide_btn_margin_bottom_phone">25dp</dimen>
+
+    <dimen name="benchmarkui_config_content_spacing_horizontal_tablet_big">20dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+    <dimen name="benchmarkui_config_content_spacing_horizontal_tablet_small">16dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+    <dimen name="benchmarkui_config_content_spacing_horizontal_phone">12dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+    <dimen name="benchmarkui_config_content_spacing_vertical_tablet_big">12dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
+    <dimen name="benchmarkui_config_content_spacing_vertical_tablet_small">10dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
+    <dimen name="benchmarkui_config_content_spacing_vertical_phone">7.5dp
+    </dimen> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
+    <dimen name="benchmarkui_config_simple_list_item_height_tablet_big">61dp</dimen>
+    <dimen name="benchmarkui_config_simple_list_item_height_tablet_small">49dp</dimen>
+    <dimen name="benchmarkui_config_simple_list_item_height_phone">41dp</dimen>
+    <dimen name="benchmarkui_config_simple_list_icon_size_tablet_big">26dp</dimen>
+    <dimen name="benchmarkui_config_simple_list_icon_size_tablet_small">24dp</dimen>
+    <dimen name="benchmarkui_config_simple_list_icon_size_phone">22dp</dimen>
+
+    <dimen name="benchmarkui_config_separator_height_phone">1dp</dimen>
 </resources>
