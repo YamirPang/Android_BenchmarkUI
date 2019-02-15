@@ -1,4 +1,4 @@
-# OA智能签章框架Java版
+# Android 开源UI库(Android Benchmark UI)
 
 政企(信产)研发中心 Android开源版基础UI库
 
@@ -31,7 +31,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.ZealP:SmartSignet_OA_Java:最新版本号'
+    implementation 'com.github.ZealP:Android_BenchmarkUI:最新版本号'
 }
 ```
 ### 全局配置
@@ -59,13 +59,10 @@ public class App extends Application {
 
 ## 调用实例
 
-功能调用可参照demo代码:
+功能调用可参照demo代码
 
->声明 ：具体的调用方法正在加紧编写中,敬请期待
+>声明 ：具体的调用文档正在加紧撰写中,敬请期待
 
 ## 声明
 
 此框架不得用来进行非本司或未被本司授权的商业化开发
-
-想使用Kotlin版本的框架请移步 [OA智能签章框架Kotlin版(已停止维护)](https://github.com/ZealP/SmartSignet_OA_Kotlin)
-
