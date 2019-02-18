@@ -12,13 +12,11 @@ import android.graphics.SweepGradient;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.config.UIConfig;
 import com.zealp.benchmark_ui.utils.CommonUtils;
 import com.zealp.benchmark_ui.utils.DensityUtils;
-
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 /**
  * Author: ZealP

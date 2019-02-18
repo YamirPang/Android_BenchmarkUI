@@ -3,7 +3,8 @@ package com.zealp.benchmark_ui.module.me.iwf.photopicker.utils;
 import android.content.Context;
 import android.net.Uri;
 import android.provider.MediaStore.Images.Media;
-import androidx.loader.content.CursorLoader;
+import android.support.v4.content.CursorLoader;
+
 import static android.provider.MediaStore.MediaColumns.MIME_TYPE;
 
 /**

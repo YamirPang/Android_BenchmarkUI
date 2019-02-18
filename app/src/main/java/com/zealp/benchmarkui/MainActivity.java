@@ -1,6 +1,6 @@
 package com.zealp.benchmarkui;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;

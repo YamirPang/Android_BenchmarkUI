@@ -2,7 +2,7 @@ package com.zealp.benchmark_ui.module.me.iwf.photopicker.utils;
 
 import android.Manifest;
 import android.os.Build;
-import androidx.annotation.RequiresApi;
+import android.support.annotation.RequiresApi;
 
 /**
  * Created by donglua on 2016/10/19.

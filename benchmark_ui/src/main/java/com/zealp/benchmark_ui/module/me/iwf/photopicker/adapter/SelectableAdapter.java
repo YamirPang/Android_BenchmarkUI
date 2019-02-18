@@ -5,7 +5,7 @@ import com.zealp.benchmark_ui.module.me.iwf.photopicker.entity.PhotoDirectory;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.event.Selectable;
 import java.util.ArrayList;
 import java.util.List;
-import androidx.recyclerview.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 
 public abstract class SelectableAdapter<VH extends RecyclerView.ViewHolder>
         extends RecyclerView.Adapter<VH> implements Selectable {

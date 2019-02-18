@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.request.RequestOptions;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.entity.PhotoDirectory;
 import java.util.ArrayList;
@@ -76,16 +76,27 @@ public class PopupDirectoryListAdapter extends BaseAdapter {
         }
 
         public void bindData(PhotoDirectory directory) {
-            final RequestOptions options = new RequestOptions();
-            options.dontAnimate()
+//            final RequestOptions options = new RequestOptions();
+//            options.dontAnimate()
+//                    .dontTransform()
+//                    .override(800, 800)
+//                    .placeholder(R.drawable.__picker_ic_photo_black_48dp)
+//                    .error(R.drawable.__picker_ic_broken_image_black_48dp);
+//            glide.setDefaultRequestOptions(options)
+//                    .load(directory.getCoverPath())
+//                    .thumbnail(0.1f)
+//                    .into(ivCover);
+
+            Glide.with(ivCover.getContext())
+                    .load(directory.getCoverPath())
+                    .asBitmap()
                     .dontTransform()
                     .override(800, 800)
                     .placeholder(R.drawable.__picker_ic_photo_black_48dp)
-                    .error(R.drawable.__picker_ic_broken_image_black_48dp);
-            glide.setDefaultRequestOptions(options)
-                    .load(directory.getCoverPath())
+                    .error(R.drawable.__picker_ic_broken_image_black_48dp)
                     .thumbnail(0.1f)
                     .into(ivCover);
+
             tvName.setText(directory.getName());
             tvCount.setText(tvCount.getContext().getString(R.string.__picker_image_count, directory.getPhotos().size()));
         }

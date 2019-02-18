@@ -1,7 +1,7 @@
 package com.zealp.benchmark_ui.module.me.iwf.photopicker.utils;
 
 
-import androidx.core.content.FileProvider;
+import android.support.v4.content.FileProvider;
 
 /**
  * Created by Donglu on 2017/6/7.

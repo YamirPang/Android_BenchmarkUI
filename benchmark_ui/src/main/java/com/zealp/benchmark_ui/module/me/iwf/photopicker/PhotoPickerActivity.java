@@ -13,9 +13,9 @@ import com.zealp.benchmark_ui.module.me.iwf.photopicker.fragment.ImagePagerFragm
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.fragment.PhotoPickerFragment;
 import java.util.ArrayList;
 import java.util.List;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import static android.widget.Toast.LENGTH_LONG;
 import static com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPicker.DEFAULT_COLUMN_NUMBER;
 import static com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPicker.DEFAULT_MAX_COUNT;

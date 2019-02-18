@@ -3,18 +3,19 @@ package com.zealp.benchmark_ui.module.me.iwf.photopicker.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
+import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.request.RequestOptions;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import androidx.viewpager.widget.PagerAdapter;
 
 /**
  * Created by donglua on 15/6/21.
@@ -48,13 +49,24 @@ public class PhotoPagerAdapter extends PagerAdapter {
         boolean canLoadImage = AndroidLifecycleUtils.canLoadImage(context);
 
         if (canLoadImage) {
-            final RequestOptions options = new RequestOptions();
-            options.dontAnimate()
-                    .dontTransform()
+//            final RequestOptions options = new RequestOptions();
+//            options.dontAnimate()
+//                    .dontTransform()
+//                    .override(800, 800)
+//                    .placeholder(R.drawable.__picker_ic_photo_black_48dp)
+//                    .error(R.drawable.__picker_ic_broken_image_black_48dp);
+//            mGlide.setDefaultOptions(options).load(uri)
+//                    .thumbnail(0.1f)
+//                    .into(imageView);
+
+            Glide
+                    .with(context)
+                    .load(uri)
+                    .asBitmap()
+                    .dontAnimate()
                     .override(800, 800)
                     .placeholder(R.drawable.__picker_ic_photo_black_48dp)
-                    .error(R.drawable.__picker_ic_broken_image_black_48dp);
-            mGlide.setDefaultRequestOptions(options).load(uri)
+                    .error(R.drawable.__picker_ic_broken_image_black_48dp)
                     .thumbnail(0.1f)
                     .into(imageView);
         }
@@ -91,7 +103,8 @@ public class PhotoPagerAdapter extends PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
-        mGlide.clear((View) object);
+//        mGlide.clear((View) object);
+        Glide.clear((View) object);
     }
 
     @Override

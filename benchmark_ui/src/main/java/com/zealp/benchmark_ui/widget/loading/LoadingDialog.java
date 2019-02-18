@@ -3,12 +3,10 @@ package com.zealp.benchmark_ui.widget.loading;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.StyleRes;
 import android.widget.TextView;
-
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.common.BaseDialog;
-
-import androidx.annotation.StyleRes;
 
 /**
  * Author: ZealP

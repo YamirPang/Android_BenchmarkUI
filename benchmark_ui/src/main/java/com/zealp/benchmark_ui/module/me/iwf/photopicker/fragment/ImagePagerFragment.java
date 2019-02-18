@@ -1,6 +1,9 @@
 package com.zealp.benchmark_ui.module.me.iwf.photopicker.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +14,6 @@ import com.zealp.benchmark_ui.module.me.iwf.photopicker.adapter.PhotoPagerAdapte
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 /**
  * Image Pager Fragment

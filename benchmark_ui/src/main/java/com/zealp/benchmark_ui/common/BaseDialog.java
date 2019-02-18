@@ -2,14 +2,13 @@ package com.zealp.benchmark_ui.common;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.AppCompatDialog;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.utils.KeyboardUtils;
 import com.zealp.benchmark_ui.utils.ResourceUtil;
-
-import androidx.appcompat.app.AppCompatDialog;
 
 /**
  * Author: Dev_@ZealP

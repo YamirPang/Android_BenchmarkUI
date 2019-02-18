@@ -7,7 +7,7 @@ import com.zealp.benchmark_ui.widget.loading.ChrysanthemumLoadingDialog;
 import com.zealp.benchmark_ui.widget.loading.LoadingDialog;
 import com.zealp.benchmarkui.R;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 
 public class LoadingActivity extends AppCompatActivity {
 

@@ -13,7 +13,7 @@ import android.view.animation.LinearInterpolator;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.utils.DensityUtils;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 /**
  * Author: ZealP

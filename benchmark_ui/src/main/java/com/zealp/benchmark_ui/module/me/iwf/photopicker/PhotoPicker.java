@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.PermissionsUtils;
 import java.util.ArrayList;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by Donglua on 16/6/25.

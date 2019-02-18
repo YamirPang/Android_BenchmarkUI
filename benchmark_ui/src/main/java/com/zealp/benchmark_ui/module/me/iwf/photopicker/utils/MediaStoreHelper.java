@@ -3,14 +3,15 @@ package com.zealp.benchmark_ui.module.me.iwf.photopicker.utils;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
+
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPicker;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.entity.PhotoDirectory;
 import java.util.ArrayList;
 import java.util.List;
-import androidx.fragment.app.FragmentActivity;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
 import static android.provider.BaseColumns._ID;
 import static android.provider.MediaStore.Images.ImageColumns.BUCKET_DISPLAY_NAME;
 import static android.provider.MediaStore.Images.ImageColumns.BUCKET_ID;

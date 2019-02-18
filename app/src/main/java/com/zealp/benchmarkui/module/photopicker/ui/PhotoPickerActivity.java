@@ -2,21 +2,18 @@ package com.zealp.benchmarkui.module.photopicker.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.OrientationHelper;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
-
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPicker;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPreview;
 import com.zealp.benchmarkui.R;
 import com.zealp.benchmarkui.module.photopicker.adapter.PhotoAdapter;
 import com.zealp.benchmarkui.module.photopicker.listener.RecyclerItemClickListener;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.OrientationHelper;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 public class PhotoPickerActivity extends AppCompatActivity implements View.OnClickListener {
 
