@@ -19,6 +19,12 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+    <style name="BM_UI_ToolBar_Style" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item> <!--  敲定颜色-->
+        <item name="android:textSize">15sp</item> <!--  搞掂字体大小-->
+        <item name="android:textStyle">normal</item>
+    </style>
+
     <!--*********************************************
      *                  DialogTheme                  *
      **********************************************-->

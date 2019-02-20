@@ -11,6 +11,7 @@ import com.zealp.benchmark_ui.widget.loading.ChrysanthemumLoadingDialog;
 import com.zealp.benchmark_ui.widget.loading.LoadingDialog;
 import com.zealp.benchmarkui.module.loading.ui.LoadingActivity;
 import com.zealp.benchmarkui.module.photopicker.ui.PhotoPickerActivity;
+import com.zealp.benchmarkui.module.ratingstar.ui.RatingStarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        routerAction("loading");
         routerAction("photopicker");
+//        routerAction("ratingstar");
     }
 
     private void routerAction(String className) {
@@ -33,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
             case "photopicker":
                 intent.setClass(this, PhotoPickerActivity.class);
+                startActivity(intent);
+                break;
+
+            case "ratingstar":
+                intent.setClass(this, RatingStarActivity.class);
                 startActivity(intent);
                 break;
             default:

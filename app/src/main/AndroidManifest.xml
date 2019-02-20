@@ -24,6 +24,10 @@
             android:theme="@style/AppTheme" />
 
         <activity
+            android:name=".module.ratingstar.ui.RatingStarActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
             android:name=".module.photopicker.ui.PhotoPickerActivity"
             android:theme="@style/AppTheme" />
 
