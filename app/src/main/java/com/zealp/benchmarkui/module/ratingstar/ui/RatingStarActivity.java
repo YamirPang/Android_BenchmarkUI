@@ -34,38 +34,6 @@ public class RatingStarActivity extends AppCompatActivity {
             @Override
             public void getRating(float ratingNum) {
                 System.out.println("ratingNum = " + ratingNum);
-                switch ((int) ratingNum) {
-                    case 0:
-                        mResultText.setVisibility(View.INVISIBLE);
-                        break;
-
-                    case 1:
-                        mResultText.setVisibility(View.VISIBLE);
-                        mResultText.setText("差");
-                        break;
-
-                    case 2:
-                        mResultText.setVisibility(View.VISIBLE);
-                        mResultText.setText("一般");
-                        break;
-
-                    case 3:
-                        mResultText.setVisibility(View.VISIBLE);
-                        mResultText.setText("满意");
-                        break;
-
-                    case 4:
-                        mResultText.setVisibility(View.VISIBLE);
-                        mResultText.setText("很满意");
-                        break;
-
-                    case 5:
-                        mResultText.setVisibility(View.VISIBLE);
-                        mResultText.setText("强烈推荐");
-                        break;
-
-                    default:
-                }
             }
         });
     }

@@ -30,4 +30,10 @@
     <string name="benchmarkui_lab_button_submit">确 定</string>
     <string name="benchmarkui_lab_button_cancel">取 消</string>
     <string name="benchmarkui_lab_button_reset">重 置</string>
+
+    <!--**********************************************
+                         ImageView
+    ***********************************************-->
+    <string name="benchmark_ui_preview_play_failed">播放失败</string>
+    <string name="benchmark_ui_preview_count_string">%1$d/%2$d</string>
 </resources>

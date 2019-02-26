@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zealp.benchmarkui">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App.App"
         android:allowBackup="true"
@@ -37,6 +39,14 @@
 
         <activity
             android:name="com.zealp.benchmark_ui.module.me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".module.image.ui.PreviewActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.zealp.benchmark_ui.widget.preview.ui.PreviewActivity"
             android:theme="@style/AppTheme" />
 
     </application>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Preview-->
+    <item name="item_image_key" type="id" />
+    <!--EasyIndicator-->
+    <item name="view_pager" type="id"/>
+</resources>

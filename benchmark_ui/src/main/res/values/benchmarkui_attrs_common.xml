@@ -182,4 +182,16 @@
                        list item bg
     **********************************************-->
     <attr name="benchmarkui_config_separator_height" format="dimension" />
+
+    <!--**********************************************
+                       ImageView
+    **********************************************-->
+    <declare-styleable name="BezierBannerView">
+        <attr name="bbv_selectedColor" format="color" />
+        <attr name="bbv_unSelectedColor" format="color" />
+        <attr name="bbv_selectedRadius" format="dimension" />
+        <attr name="bbv_unSelectedRadius" format="dimension" />
+        <attr name="bbv_spacing" format="dimension" />
+    </declare-styleable>
+
 </resources>
