@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 //        routerAction("loading");
 //        routerAction("photopicker");
 //        routerAction("ratingstar");
-        routerAction("preview");
+//        routerAction("preview");
     }
 
     private void routerAction(String className) {
