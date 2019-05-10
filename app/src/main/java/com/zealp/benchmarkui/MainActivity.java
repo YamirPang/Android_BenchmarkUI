@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.zealp.benchmarkui.module.flowlayout.ui.FlowLayoutActivity;
 import com.zealp.benchmarkui.module.image.ui.PreviewActivity;
 import com.zealp.benchmarkui.module.loading.ui.LoadingActivity;
 import com.zealp.benchmarkui.module.photopicker.ui.PhotoPickerActivity;
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
 //        routerAction("loading");
 //        routerAction("photopicker");
 //        routerAction("ratingstar");
-        routerAction("preview");
+//        routerAction("preview");
+        routerAction("flowlayout");
     }
 
     private void routerAction(String className) {
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
             case "preview":
                 intent.setClass(this, PreviewActivity.class);
+                startActivity(intent);
+                this.finish();
+                break;
+
+            case "flowlayout":
+                intent.setClass(this, FlowLayoutActivity.class);
                 startActivity(intent);
                 this.finish();
                 break;

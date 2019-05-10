@@ -42,12 +42,16 @@
             android:theme="@style/AppTheme" />
 
         <activity
+            android:name=".module.flowlayout.ui.FlowLayoutActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
             android:name=".module.image.ui.PreviewActivity"
             android:theme="@style/AppTheme" />
 
         <activity
             android:name="com.zealp.benchmark_ui.widget.preview.ui.PreviewActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
     </application>
 

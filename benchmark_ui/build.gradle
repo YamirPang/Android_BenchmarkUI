@@ -27,6 +27,7 @@ android {
             jniLibs.srcDir 'libs'
             res.srcDirs =
                     [
+                            'src/main/res/layouts/flowlayout',
                             'src/main/res/layouts/image',
                             'src/main/res/layouts/photopicker',
                             'src/main/res/layouts/common',

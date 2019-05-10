@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标签-->
+    <string-array name="tags_values">
+        <item>Android</item>
+        <item>Javascript</item>
+        <item>React Native</item>
+        <item>Kotlin</item>
+        <item>C++</item>
+        <item>C#</item>
+        <item>Object-C</item>
+    </string-array>
+
+    <integer-array name="tags_selects_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+    </integer-array>
+</resources>

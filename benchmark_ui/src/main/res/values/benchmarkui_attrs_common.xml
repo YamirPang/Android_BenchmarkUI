@@ -65,11 +65,6 @@
 
     <attr name="benchmarkui_config_icon_drawable_padding" format="dimension" />
 
-    <attr name="benchmarkui_config_content_spacing_horizontal" format="dimension" /> <!-- margin 和 padding 等使用的内容通用水平间距 -->
-    <attr name="benchmarkui_config_content_spacing_vertical" format="dimension" /> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
-    <attr name="benchmarkui_config_simple_list_item_height" format="dimension" />
-    <attr name="benchmarkui_config_simple_list_icon_size" format="dimension" />
-
     <!-- 自定义按钮控件 ButtonView -->
     <declare-styleable name="ButtonView">
         <!-- 按钮的填充颜色，默认Color.TRANSPARENT -->
@@ -193,5 +188,29 @@
         <attr name="bbv_unSelectedRadius" format="dimension" />
         <attr name="bbv_spacing" format="dimension" />
     </declare-styleable>
+
+    <!--**********************************************
+                           flowLayout
+        **********************************************-->
+    <attr name="benchmarkui_config_content_spacing_horizontal" format="dimension" /> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+    <attr name="benchmarkui_config_content_spacing_vertical" format="dimension" /> <!-- margin 和 padding 等使用的内容通用垂直间距 -->
+
+    <!--FlowTagLayout-->
+    <declare-styleable name="FlowTagLayout">
+        <!--选择模式，默认不可选-->
+        <attr name="ftl_check_mode" format="enum">
+            <!--不可选择-->
+            <enum name="none" value="0" />
+            <!--单选-->
+            <enum name="single" value="1" />
+            <!--多选-->
+            <enum name="multi" value="2" />
+            <!--只是展示-->
+            <enum name="display" value="3" />
+        </attr>
+        <attr name="ftl_entries" format="reference" />
+        <attr name="ftl_selecteds" format="reference" />
+    </declare-styleable>
+
 
 </resources>
