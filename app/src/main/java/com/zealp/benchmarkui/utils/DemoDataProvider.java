@@ -38,17 +38,37 @@ public class DemoDataProvider {
             "http://photocdn.sohu.com/tvmobilemvms/20150907/144159406950245847.jpg",//碟中谍4:阿汤哥高塔命悬一线,超越不可能
     };
 
-    public static List<BannerItem> getBannerList() {
+    public static int[] ress = new int[]{//640*360 360/640=0.5625
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo,
+            R.drawable.app_logo
+    };
+
+    public static List<BannerItem> getBannerInternetImgList() {
         ArrayList<BannerItem> list = new ArrayList<>();
         for (int i = 0; i < urls.length; i++) {
             BannerItem item = new BannerItem();
             item.imgUrl = urls[i];
             item.title = titles[i];
-            item.subTitle = "副标题";
+            item.subTitle = "这个是副标题";
 
             list.add(item);
         }
+        return list;
+    }
 
+    public static List<BannerItem> getBannerLocalImgList() {
+        ArrayList<BannerItem> list = new ArrayList<>();
+        for (int i = 0; i < urls.length; i++) {
+            BannerItem item = new BannerItem();
+            item.imgRes = ress[i];
+            item.title = titles[i];
+            item.subTitle = "这个是副标题";
+
+            list.add(item);
+        }
         return list;
     }
 

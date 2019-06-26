@@ -33,7 +33,8 @@ public class BannerActivity extends AppCompatActivity {
     }
 
     private void initBanner(){
-        List<BannerItem> mData = DemoDataProvider.getBannerList();
+//        List<BannerItem> mData = DemoDataProvider.getBannerInternetImgList();
+        List<BannerItem> mData = DemoDataProvider.getBannerLocalImgList();
         mBanner.setSelectAnimClass(ZoomInEnter.class)
                 .setSource(mData)
                 .setOnItemClickL(new BaseCustomBanner.OnItemClickL() {

@@ -10,6 +10,15 @@ public class BannerItem {
     public String imgUrl;
     public String title;
     public String subTitle;
+    public int imgRes;
+
+    public int getImgRes() {
+        return imgRes;
+    }
+
+    public void setImgRes(int imgRes) {
+        this.imgRes = imgRes;
+    }
 
     public String getImgUrl() {
         return imgUrl;

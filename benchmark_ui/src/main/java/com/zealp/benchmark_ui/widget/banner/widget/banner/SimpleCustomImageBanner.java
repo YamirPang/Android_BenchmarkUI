@@ -85,7 +85,7 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
         if (mImageLoader == null) {
             mImageLoader = new GlideImageLoader();
         }
-        return  mImageLoader;
+        return mImageLoader;
     }
 
     /**
@@ -100,10 +100,19 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
         iv.setLayoutParams(new LinearLayout.LayoutParams(itemWidth, itemHeight));
 
-        String imgUrl = item.imgUrl;
+        if (!TextUtils.isEmpty(item.imgUrl)) {
+            String imgUrl = item.imgUrl;
 
-        if (!TextUtils.isEmpty(imgUrl)) {
-            getImageLoader().displayImage(mContext, imgUrl, iv,
+            if (!TextUtils.isEmpty(imgUrl)) {
+                getImageLoader().displayImage(mContext, imgUrl, iv,
+                        itemWidth, itemHeight, mColorDrawable,
+                        mEnableCache ? DiskCacheStrategy.RESULT : DiskCacheStrategy.NONE);
+            } else {
+                iv.setImageDrawable(mColorDrawable);
+            }
+
+        } else if (item.imgRes != 0) {
+            getImageLoader().displayImage(mContext, item.imgRes, iv,
                     itemWidth, itemHeight, mColorDrawable,
                     mEnableCache ? DiskCacheStrategy.RESULT : DiskCacheStrategy.NONE);
         } else {
