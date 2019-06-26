@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <com.zealp.benchmark_ui.widget.button.ButtonView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="?attr/benchmarkui_guide_btn_margin_bottom"
+        android:paddingLeft="@dimen/benchmarkui_guide_btn_padding_horizontal_phone"
+        android:paddingTop="?attr/benchmarkui_guide_btn_padding_vertical"
+        android:paddingRight="@dimen/benchmarkui_guide_btn_padding_horizontal_phone"
+        android:paddingBottom="?attr/benchmarkui_guide_btn_padding_vertical"
+        android:text="立刻体验"
+        android:textColor="@color/benchmarkui_config_color_10_white"
+        android:textSize="?attr/benchmarkui_btn_view_text_size"
+        app:textRadius="?attr/benchmarkui_btn_view_radius"
+        app:textStrokeColor="@color/benchmarkui_config_color_10_white"
+        app:textStrokeWidth="1dp" />
+
+</RelativeLayout>
