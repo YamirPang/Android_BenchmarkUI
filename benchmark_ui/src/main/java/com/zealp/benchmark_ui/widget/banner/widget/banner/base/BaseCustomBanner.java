@@ -237,7 +237,7 @@ public abstract class BaseCustomBanner<E, T extends BaseCustomBanner<E, T>> exte
             mTvTitle.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0F));
             mTvTitle.setSingleLine(true);
             mTvTitle.setTextColor(textColor);
-            mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize + 5);
+            mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize + 2);
             mTvTitle.setVisibility(isTitleShow ? VISIBLE : INVISIBLE);
 
             mTvSubTitle = new TextView(context);
@@ -258,10 +258,12 @@ public abstract class BaseCustomBanner<E, T extends BaseCustomBanner<E, T>> exte
                 mTvTitle.setPadding(0, 0, 0, dp2px(5));
                 mTvTitle.setEllipsize(TextUtils.TruncateAt.END);
                 mTvTitle.setGravity(Gravity.LEFT);
+                mTvTitle.getPaint().setFakeBoldText(true);
 
                 mTvSubTitle.setPadding(0, 0, 0, dp2px(20));
                 mTvSubTitle.setEllipsize(TextUtils.TruncateAt.END);
                 mTvSubTitle.setGravity(Gravity.LEFT);
+                mTvSubTitle.getPaint().setFakeBoldText(true);
             } else {
                 if (indicatorGravity == Gravity.RIGHT) {
                     mLlBottomBar.setGravity(Gravity.CENTER_VERTICAL);

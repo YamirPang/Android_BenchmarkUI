@@ -28,6 +28,7 @@ android {
             res.srcDirs =
                     [
                             'src/main/res/layouts/banner',
+                            'src/main/res/layouts/flowlayout',
                             'src/main/res/layouts/image',
                             'src/main/res/layouts/photopicker',
                             'src/main/res/layouts/common',

@@ -9,6 +9,7 @@
         android:id="@+id/sib_anim"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        app:bb_textSize="14sp"
         app:bb_barColor="#00FFFFFF"
         app:bb_indicatorGravity="CENTER"
         app:bb_scale="0.5625" />
