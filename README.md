@@ -1,10 +1,6 @@
 # Android 开源UI库(Android Benchmark UI)
 
-政企(信产)研发中心 Android开源版基础UI库
-
-## 联系方式
-
-使用存在问题可联系研发中心或发邮件至zealpeng@163.com邮箱反馈。。。
+Android开源版基础UI库
 
 ## 版本说明
 ### 最新版本
@@ -61,8 +57,4 @@ public class App extends Application {
 
 功能调用可参照demo代码
 
->声明 ：具体的调用文档正在加紧撰写中,敬请期待
-
-## 声明
-
-此框架不得用来进行非本司或未被本司授权的商业化开发
+>具体的调用文档正在加紧撰写中,敬请期待
