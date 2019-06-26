@@ -106,7 +106,7 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
             if (!TextUtils.isEmpty(imgUrl)) {
                 getImageLoader().displayImage(mContext, imgUrl, iv,
                         itemWidth, itemHeight, mColorDrawable,
-                        mEnableCache ? DiskCacheStrategy.RESULT : DiskCacheStrategy.NONE);
+                        mEnableCache ? DiskCacheStrategy.RESOURCE : DiskCacheStrategy.NONE);
             } else {
                 iv.setImageDrawable(mColorDrawable);
             }
@@ -114,7 +114,7 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
         } else if (item.imgRes != 0) {
             getImageLoader().displayImage(mContext, item.imgRes, iv,
                     itemWidth, itemHeight, mColorDrawable,
-                    mEnableCache ? DiskCacheStrategy.RESULT : DiskCacheStrategy.NONE);
+                    mEnableCache ? DiskCacheStrategy.RESOURCE : DiskCacheStrategy.NONE);
         } else {
             iv.setImageDrawable(mColorDrawable);
         }

@@ -10,6 +10,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.entity.PhotoDirectory;
+import com.zealp.benchmark_ui.utils.GlideApp;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,9 +89,9 @@ public class PopupDirectoryListAdapter extends BaseAdapter {
 //                    .thumbnail(0.1f)
 //                    .into(ivCover);
 
-            Glide.with(ivCover.getContext())
+            GlideApp.with(ivCover.getContext())
                     .load(directory.getCoverPath())
-                    .asBitmap()
+//                    .asBitmap()
                     .dontTransform()
                     .override(800, 800)
                     .placeholder(R.drawable.__picker_ic_photo_black_48dp)

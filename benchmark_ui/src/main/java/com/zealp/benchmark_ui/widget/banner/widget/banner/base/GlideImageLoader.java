@@ -22,6 +22,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.zealp.benchmark_ui.utils.GlideApp;
 
 /**
  * Glide 图片加载
@@ -57,6 +58,6 @@ public class GlideImageLoader implements ImageLoader {
      */
     @Override
     public void displayImage(Context context, Object path, ImageView imageView, int width, int height, Drawable placeholder, DiskCacheStrategy strategy) {
-        Glide.with(context).load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
+        GlideApp.with(context).load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
     }
 }
