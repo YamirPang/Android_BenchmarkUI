@@ -13,14 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.zealp.benchmark_ui.widget.banner.widget.banner.base;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.zealp.benchmark_ui.utils.GlideApp;
 
@@ -40,7 +37,7 @@ public class GlideImageLoader implements ImageLoader {
      */
     @Override
     public void displayImage(Context context, Object path, ImageView imageView) {
-        Glide.with(context)
+        GlideApp.with(context)
                 .load(path)
                 .into(imageView);
     }
