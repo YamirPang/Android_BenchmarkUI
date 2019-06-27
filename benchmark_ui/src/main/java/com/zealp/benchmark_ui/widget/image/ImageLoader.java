@@ -227,7 +227,7 @@ public class ImageLoader {
      * @lastModify 2017年2月18日
      */
     public void clearViewCache(View view) {
-//        GlideApp..clear(view);
+        GlideApp.with(view).clear(view);
     }
 
     /**

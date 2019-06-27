@@ -40,20 +40,21 @@ public class GlideMediaLoader implements IMediaLoader {
     @Override
     public void displayImage(@NonNull Fragment context, @NonNull String path, ImageView imageView, @NonNull final ISimpleTarget simpleTarget) {
         GlideApp.with(context)
+                .asBitmap()
                 .load(path)
 //                .placeholder(R.drawable.benchmark_ui_ic_default_img)
                 .error(R.drawable.benchmark_ui_ic_no_img)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .listener(new RequestListener<Drawable>() {
+                .listener(new RequestListener<Bitmap>() {
 
                     @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
                         simpleTarget.onLoadFailed(null);
                         return false;
                     }
 
                     @Override
-                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                    public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
                         simpleTarget.onResourceReady();
                         return false;
                     }
@@ -72,20 +73,20 @@ public class GlideMediaLoader implements IMediaLoader {
     @Override
     public void displayGifImage(@NonNull Fragment context, @NonNull String path, ImageView imageView, @NonNull final ISimpleTarget simpleTarget) {
         GlideApp.with(context)
+                .asGif()
                 .load(path)
-//                .asGif()
                 .placeholder(R.drawable.benchmark_ui_ic_default_img)
                 .error(R.drawable.benchmark_ui_ic_no_img)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .listener(new RequestListener<Drawable>() {
+                .listener(new RequestListener<GifDrawable>() {
                     @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target, boolean isFirstResource) {
                         simpleTarget.onLoadFailed(null);
                         return false;
                     }
 
                     @Override
-                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                    public boolean onResourceReady(GifDrawable resource, Object model, Target<GifDrawable> target, DataSource dataSource, boolean isFirstResource) {
                         simpleTarget.onResourceReady();
                         return false;
                     }
@@ -100,7 +101,7 @@ public class GlideMediaLoader implements IMediaLoader {
      **/
     @Override
     public void onStop(@NonNull Fragment context) {
-        Glide.with(context).onStop();
+        GlideApp.with(context).onStop();
     }
 
     /**
@@ -110,6 +111,6 @@ public class GlideMediaLoader implements IMediaLoader {
      **/
     @Override
     public void clearMemory(@NonNull Context c) {
-        Glide.get(c).clearMemory();
+        GlideApp.get(c).clearMemory();
     }
 }

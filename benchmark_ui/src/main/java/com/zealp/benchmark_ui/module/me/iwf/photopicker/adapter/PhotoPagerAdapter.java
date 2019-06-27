@@ -104,8 +104,8 @@ public class PhotoPagerAdapter extends PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
-//        mGlide.clear((View) object);
 //        Glide.clear((View) object);
+        GlideApp.with(container.getContext()).clear((View) object);
     }
 
     @Override

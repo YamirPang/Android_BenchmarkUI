@@ -238,7 +238,7 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
     @Override
     public void onViewRecycled(PhotoViewHolder holder) {
 //        glide.clear(holder.ivPhoto);
-//        GlideApp.clear(holder.ivPhoto);
+        GlideApp.with(holder.itemView).clear(holder.ivPhoto);
         super.onViewRecycled(holder);
     }
 }
