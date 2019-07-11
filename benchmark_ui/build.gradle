@@ -27,6 +27,7 @@ android {
             jniLibs.srcDir 'libs'
             res.srcDirs =
                     [
+                            'src/main/res/layouts/textview',
                             'src/main/res/layouts/banner',
                             'src/main/res/layouts/flowlayout',
                             'src/main/res/layouts/image',
@@ -54,4 +55,5 @@ dependencies {
     implementation 'com.android.support:design:27.1.0'
     implementation 'jp.wasabeef:glide-transformations:2.0.1'
     implementation 'com.nineoldandroids:library:2.4.0'
+    api 'uk.co.chrisjenx:calligraphy:2.3.0'
 }

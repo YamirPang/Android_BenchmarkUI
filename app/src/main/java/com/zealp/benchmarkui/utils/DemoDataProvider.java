@@ -88,6 +88,14 @@ public class DemoDataProvider {
             "720 × 1280",
     };
 
+    public static ArrayList<Integer> getUsertGuides() {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(R.drawable.guide_img_1);
+        list.add(R.drawable.guide_img_2);
+        list.add(R.drawable.guide_img_3);
+        list.add(R.drawable.guide_img_4);
+        return list;
+    }
 
     private static List<String> getUrls() {
         List<String> urls = new ArrayList<>();

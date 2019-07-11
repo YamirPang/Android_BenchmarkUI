@@ -2,6 +2,11 @@ package com.zealp.benchmark_ui.common;
 
 import android.app.Application;
 import android.content.Context;
+import android.graphics.Typeface;
+import android.text.TextUtils;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.TypefaceUtils;
 
 /**
  * Author: Dev_@ZealP
@@ -53,5 +58,29 @@ public class BenchmarkUI {
         }
     }
 
+//=======================字体===========================//
+    /**
+     * @return 获取默认字体
+     */
+    public static Typeface getDefaultTypeface() {
+        String fontPath = CalligraphyConfig.get().getFontPath();
+        if (!TextUtils.isEmpty(fontPath)) {
+            return TypefaceUtils.load(getContext().getAssets(), fontPath);
+        }
+        return null;
+    }
 
+    /**
+     * @param fontPath 字体路径
+     * @return 获取默认字体
+     */
+    public static Typeface getDefaultTypeface(String fontPath) {
+        if (TextUtils.isEmpty(fontPath)) {
+            fontPath = CalligraphyConfig.get().getFontPath();
+        }
+        if (!TextUtils.isEmpty(fontPath)) {
+            return TypefaceUtils.load(getContext().getAssets(), fontPath);
+        }
+        return null;
+    }
 }

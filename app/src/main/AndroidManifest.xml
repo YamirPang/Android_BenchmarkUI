@@ -57,6 +57,14 @@
             android:name=".module.banner.ui.BannerActivity"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name=".module.banner.ui.GuideActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".module.textview.ui.SuperTextViewActivity"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

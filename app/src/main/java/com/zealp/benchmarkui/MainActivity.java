@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.zealp.benchmarkui.module.banner.ui.BannerActivity;
+import com.zealp.benchmarkui.module.banner.ui.GuideActivity;
 import com.zealp.benchmarkui.module.image.ui.PreviewActivity;
 import com.zealp.benchmarkui.module.loading.ui.LoadingActivity;
 import com.zealp.benchmarkui.module.photopicker.ui.PhotoPickerActivity;
 import com.zealp.benchmarkui.module.ratingstar.ui.RatingStarActivity;
+import com.zealp.benchmarkui.module.textview.ui.SuperTextViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
 //        routerAction("photopicker");
 //        routerAction("ratingstar");
 //        routerAction("preview");
-        routerAction("banner");
+//        routerAction("supertextview");
+//        routerAction("banner");
+        routerAction("guide");
     }
 
     private void routerAction(String className) {
@@ -67,6 +71,24 @@ public class MainActivity extends AppCompatActivity {
              */
             case "banner":
                 intent.setClass(this, BannerActivity.class);
+                startActivity(intent);
+                this.finish();
+                break;
+
+            /**
+             * 启动引导页
+             */
+            case "guide":
+                intent.setClass(this, GuideActivity.class);
+                startActivity(intent);
+                this.finish();
+                break;
+
+            /**
+             * 自定义文本控件
+             */
+            case "supertextview":
+                intent.setClass(this, SuperTextViewActivity.class);
                 startActivity(intent);
                 this.finish();
                 break;

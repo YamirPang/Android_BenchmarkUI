@@ -17,4 +17,7 @@
     <color name="__picker_text_120">#787878</color>
     <color name="__picker_item_photo_border_selected">#FD8469</color>
     <color name="__picker_item_photo_border_n">#f3f3f3</color>
+
+    <!-- SuperTextView -->
+    <color name="benchmarkui_common_pressed">#10000000</color>  <!--白色背景按下去的颜色-->
 </resources>
