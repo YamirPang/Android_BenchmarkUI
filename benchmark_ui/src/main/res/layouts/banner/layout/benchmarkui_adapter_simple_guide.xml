@@ -25,6 +25,6 @@
         android:paddingBottom="3dp"
         android:text="立刻体验"
         android:textColor="@color/base_color_white"
-        android:textSize="?attr/benchmarkui_btn_view_text_size" />
+        android:textSize="14sp" />
 
 </RelativeLayout>
