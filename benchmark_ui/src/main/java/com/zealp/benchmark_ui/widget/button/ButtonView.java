@@ -10,7 +10,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.utils.SpanUtils;
 

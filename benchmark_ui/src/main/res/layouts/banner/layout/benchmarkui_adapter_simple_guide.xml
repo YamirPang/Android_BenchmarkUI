@@ -10,22 +10,21 @@
         android:layout_height="match_parent"
         android:scaleType="fitXY" />
 
-    <com.zealp.benchmark_ui.widget.button.ButtonView
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/tv_jump"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="?attr/benchmarkui_guide_btn_margin_bottom"
-        android:paddingLeft="@dimen/benchmarkui_guide_btn_padding_horizontal_phone"
-        android:paddingTop="?attr/benchmarkui_guide_btn_padding_vertical"
-        android:paddingRight="@dimen/benchmarkui_guide_btn_padding_horizontal_phone"
-        android:paddingBottom="?attr/benchmarkui_guide_btn_padding_vertical"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/guide_btn_bg"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
         android:text="立刻体验"
-        android:textColor="@color/benchmarkui_config_color_10_white"
-        android:textSize="?attr/benchmarkui_btn_view_text_size"
-        app:textRadius="?attr/benchmarkui_btn_view_radius"
-        app:textStrokeColor="@color/benchmarkui_config_color_10_white"
-        app:textStrokeWidth="1dp" />
+        android:textColor="@color/base_color_white"
+        android:textSize="?attr/benchmarkui_btn_view_text_size" />
 
 </RelativeLayout>

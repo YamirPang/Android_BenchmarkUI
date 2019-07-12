@@ -1,6 +1,7 @@
 package com.zealp.benchmark_ui.widget.banner.widget.banner;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -52,7 +53,7 @@ public class SimpleGuideBanner extends BaseIndicatorBanner<Integer, SimpleGuideB
     public View onCreateItemView(int position) {
         View inflate = View.inflate(mContext, R.layout.benchmarkui_adapter_simple_guide, null);
         ImageView iv = inflate.findViewById(R.id.iv);
-        TextView tv_jump = inflate.findViewById(R.id.tv_jump);
+        AppCompatButton tv_jump = inflate.findViewById(R.id.tv_jump);
 
         final Integer resId = mDatas.get(position);
         tv_jump.setVisibility(position == mDatas.size() - 1 ? VISIBLE : GONE);
