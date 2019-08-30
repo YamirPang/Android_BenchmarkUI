@@ -27,8 +27,8 @@ public class BannerActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner);
-
         mBanner = findViewById(R.id.sib_anim);
+//        mBanner.setScale(0.52d);
         initBanner();
     }
 

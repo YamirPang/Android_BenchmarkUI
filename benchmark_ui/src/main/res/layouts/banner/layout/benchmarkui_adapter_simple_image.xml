@@ -5,7 +5,7 @@
     android:descendantFocusability="blocksDescendants"
     android:orientation="vertical">
 
-    <ImageView
+    <com.zealp.benchmark_ui.widget.image.RoundImageView
         android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

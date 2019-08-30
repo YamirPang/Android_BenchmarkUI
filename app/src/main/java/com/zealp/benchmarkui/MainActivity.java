@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
 //        routerAction("ratingstar");
 //        routerAction("preview");
 //        routerAction("supertextview");
-//        routerAction("banner");
-        routerAction("guide");
+        routerAction("banner");
+//        routerAction("guide");
     }
 
     private void routerAction(String className) {

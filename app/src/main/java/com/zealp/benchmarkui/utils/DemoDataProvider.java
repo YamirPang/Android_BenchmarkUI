@@ -39,11 +39,11 @@ public class DemoDataProvider {
     };
 
     public static int[] ress = new int[]{//640*360 360/640=0.5625
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo,
-            R.drawable.app_logo
+            R.drawable.banner_01,
+            R.drawable.banner_02,
+            R.drawable.banner_03,
+            R.drawable.banner_01,
+            R.drawable.banner_02
     };
 
     public static List<BannerItem> getBannerInternetImgList() {

@@ -206,10 +206,13 @@ public abstract class BaseCustomBanner<E, T extends BaseCustomBanner<E, T>> exte
             }
 
             LayoutParams lp = new LayoutParams(mItemWidth, mItemHeight);
+            lp.setMargins(30, 0, 30, 0);
             addView(mViewPager, lp);
 
             //top parent of indicators
             mRlBottomBarParent = new RelativeLayout(context);
+//            mRlBottomBarParent.setBackgroundColor(Color.parseColor("#000000"));
+            mRlBottomBarParent.setBackgroundResource(R.drawable.benchmarkui_banner_relative);
             addView(mRlBottomBarParent, lp);
 
             //container of indicators and title
@@ -237,7 +240,7 @@ public abstract class BaseCustomBanner<E, T extends BaseCustomBanner<E, T>> exte
             mTvTitle.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0F));
             mTvTitle.setSingleLine(true);
             mTvTitle.setTextColor(textColor);
-            mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize + 2);
+            mTvTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize + 3);
             mTvTitle.setVisibility(isTitleShow ? VISIBLE : INVISIBLE);
 
             mTvSubTitle = new TextView(context);

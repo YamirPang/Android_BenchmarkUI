@@ -6,16 +6,18 @@ import android.graphics.drawable.ColorDrawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.widget.banner.widget.banner.base.BaseCustomIndicatorBanner;
-import com.zealp.benchmark_ui.widget.banner.widget.banner.base.BaseIndicatorBanner;
 import com.zealp.benchmark_ui.widget.banner.widget.banner.base.GlideImageLoader;
 import com.zealp.benchmark_ui.widget.banner.widget.banner.base.ImageLoader;
+import com.zealp.benchmark_ui.widget.image.RoundImageView;
 
 import java.lang.ref.WeakReference;
 
@@ -68,12 +70,10 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
     @Override
     public View onCreateItemView(int position) {
         View inflate = View.inflate(mContext, R.layout.benchmarkui_adapter_simple_image, null);
-        ImageView iv = inflate.findViewById(R.id.iv);
-
+        RoundImageView iv = inflate.findViewById(R.id.iv);
         //解决Glide资源释放的问题，详细见http://blog.csdn.net/shangmingchao/article/details/51125554
-        WeakReference<ImageView> imageViewWeakReference = new WeakReference<>(iv);
-        ImageView target = imageViewWeakReference.get();
-
+        WeakReference<RoundImageView> imageViewWeakReference = new WeakReference<>(iv);
+        RoundImageView target = imageViewWeakReference.get();
         BannerItem item = getItem(position);
         if (item != null && target != null) {
             loadingImageView(target, item);
@@ -97,8 +97,12 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
     protected void loadingImageView(ImageView iv, BannerItem item) {
         int itemWidth = mDisplayMetrics.widthPixels;
         int itemHeight = (int) (itemWidth * mScale);
-        iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        iv.setLayoutParams(new LinearLayout.LayoutParams(itemWidth, itemHeight));
+        iv.setScaleType(ImageView.ScaleType.FIT_XY);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(itemWidth, itemHeight);
+//        lp.setMargins(10, 0, 10, 0);
+        iv.setLayoutParams(lp);
+//        iv.setLayoutParams();
+
 
         if (!TextUtils.isEmpty(item.imgUrl)) {
             String imgUrl = item.imgUrl;
