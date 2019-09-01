@@ -38,6 +38,7 @@ public class GlideImageLoader implements ImageLoader {
     @Override
     public void displayImage(Context context, Object path, ImageView imageView) {
         GlideApp.with(context)
+                .asBitmap()
                 .load(path)
                 .into(imageView);
     }
@@ -55,6 +56,6 @@ public class GlideImageLoader implements ImageLoader {
      */
     @Override
     public void displayImage(Context context, Object path, ImageView imageView, int width, int height, Drawable placeholder, DiskCacheStrategy strategy) {
-        GlideApp.with(context).load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
+        GlideApp.with(context).asBitmap().load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
     }
 }
