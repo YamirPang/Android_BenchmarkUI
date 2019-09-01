@@ -101,7 +101,7 @@ public class SimpleImageBanner extends BaseIndicatorBanner<BannerItem, SimpleIma
         if (!TextUtils.isEmpty(imgUrl)) {
             getImageLoader().displayImage(mContext, imgUrl, iv,
                     itemWidth, itemHeight, mColorDrawable,
-                    mEnableCache ? DiskCacheStrategy.RESOURCE : DiskCacheStrategy.NONE);
+                    mEnableCache ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE);
         } else {
             iv.setImageDrawable(mColorDrawable);
         }

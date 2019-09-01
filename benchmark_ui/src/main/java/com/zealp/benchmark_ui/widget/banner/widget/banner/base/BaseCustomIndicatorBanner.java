@@ -238,7 +238,6 @@ public abstract class BaseCustomIndicatorBanner<E, T extends BaseCustomIndicator
         GradientDrawable drawable = new GradientDrawable();
         drawable.setCornerRadius(raduis);
         drawable.setColor(color);
-
         return drawable;
     }
 }

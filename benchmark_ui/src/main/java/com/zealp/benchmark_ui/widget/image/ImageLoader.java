@@ -113,12 +113,12 @@ public class ImageLoader {
      * @return void
      * <p>
      * tip: .diskCacheStrategy(DiskCacheStrategy strategy).设置缓存策略。
-     * DiskCacheStrategy.SOURCE：缓存原始数据
+     * DiskCacheStrategy.ALL：缓存原始数据
      * DiskCacheStrategy.RESULT：缓存变换(如缩放、裁剪等)后的资源数据
      * DiskCacheStrategy.NONE：什么都不缓存
      * DiskCacheStrategy.ALL：缓存SOURC和RESULT
      * 默认采用DiskCacheStrategy.RESULT策略
-     * 对于download only操作要使用DiskCacheStrategy.SOURCE。
+     * 对于download only操作要使用DiskCacheStrategy.ALL。
      * <p>
      * .priority(Priority priority). 指定加载的优先级，优先级越高越优先加载，但不保证所有图片都按序加载。
      * 枚举Priority.IMMEDIATE，Priority.HIGH，Priority.NORMAL，Priority.LOW
@@ -180,7 +180,7 @@ public class ImageLoader {
         if (genericRequestBuilder == null) {
             return;
         }
-        genericRequestBuilder.diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+        genericRequestBuilder.diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(defaultImage)
                 .priority(Priority.NORMAL)
                 .error(errorImage)

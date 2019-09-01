@@ -97,20 +97,17 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
     protected void loadingImageView(ImageView iv, BannerItem item) {
         int itemWidth = mDisplayMetrics.widthPixels;
         int itemHeight = (int) (itemWidth * mScale);
-        iv.setScaleType(ImageView.ScaleType.FIT_XY);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(itemWidth, itemHeight);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(itemWidth , LinearLayout.LayoutParams.MATCH_PARENT);
 //        lp.setMargins(10, 0, 10, 0);
         iv.setLayoutParams(lp);
-//        iv.setLayoutParams();
-
+//        iv.setScaleType(ImageView.ScaleType.);
 
         if (!TextUtils.isEmpty(item.imgUrl)) {
             String imgUrl = item.imgUrl;
-
             if (!TextUtils.isEmpty(imgUrl)) {
                 getImageLoader().displayImage(mContext, imgUrl, iv,
                         itemWidth, itemHeight, mColorDrawable,
-                        mEnableCache ? DiskCacheStrategy.RESOURCE : DiskCacheStrategy.NONE);
+                        mEnableCache ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE);
             } else {
                 iv.setImageDrawable(mColorDrawable);
             }
@@ -118,7 +115,7 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
         } else if (item.imgRes != 0) {
             getImageLoader().displayImage(mContext, item.imgRes, iv,
                     itemWidth, itemHeight, mColorDrawable,
-                    mEnableCache ? DiskCacheStrategy.RESOURCE : DiskCacheStrategy.NONE);
+                    mEnableCache ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE);
         } else {
             iv.setImageDrawable(mColorDrawable);
         }
