@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#eaeaea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zealp.benchmark_ui.widget.banner.widget.banner.SimpleCustomImageBanner
+        android:id="@+id/sib_anim"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:bb_textSize="14sp"
+        app:bb_barColor="#00FFFFFF"
+        app:bb_indicatorGravity="CENTER"
+        app:bb_scale="0.5625" />
+
+</LinearLayout>

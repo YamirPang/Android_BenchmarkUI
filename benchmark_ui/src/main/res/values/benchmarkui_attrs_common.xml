@@ -194,4 +194,393 @@
         <attr name="bbv_spacing" format="dimension" />
     </declare-styleable>
 
+    <!--============================Banner=========================================-->
+
+    <!-- BaseBanner -->
+    <declare-styleable name="BaseBanner">
+        <!-- Banner高宽比,范围0-1,默认0.5(for LoopViewPager)-->
+        <attr name="bb_scale" format="float" />
+        <!--for LoopViewPager start-->
+        <!-- 是否支持循环,默认true-->
+        <attr name="bb_isLoopEnable" format="boolean" />
+        <!-- 滚动延时,默认5秒-->
+        <attr name="bb_delay" format="integer" />
+        <!-- 滚动间隔,默认5秒-->
+        <attr name="bb_period" format="integer" />
+        <!-- 是否支持自动滚动,默认true-->
+        <attr name="bb_isAutoScrollEnable" format="boolean" />
+        <!--for LoopViewPager end-->
+        <!-- 设置底部背景条颜色,默认透明 -->
+        <attr name="bb_barColor" format="color" />
+        <!-- 设置当滚动到最后一个item时是否显示底部背景条 -->
+        <attr name="bb_isBarShowWhenLast" format="boolean" />
+        <!-- 设置底部背景条padding,单位dp -->
+        <attr name="bb_barPaddingLeft" format="dimension" />
+        <attr name="bb_barPaddingTop" format="dimension" />
+        <attr name="bb_barPaddingRight" format="dimension" />
+        <attr name="bb_barPaddingBottom" format="dimension" />
+        <!-- 设置标题文字颜色,默认"#ffffff" -->
+        <attr name="bb_textColor" format="color" />
+        <!-- 设置标题文字大小,单位sp,默认14sp -->
+        <attr name="bb_textSize" format="dimension" />
+        <!-- 设置是否显示标题,默认true  -->
+        <attr name="bb_isTitleShow" format="boolean" />
+        <!-- 设置是否显示指示器,默认true  -->
+        <attr name="bb_isIndicatorShow" format="boolean" />
+        <!-- 设置指示器位置.默认Gravity.CENTER时文字不显示-->
+        <attr name="bb_indicatorGravity" format="enum">
+            <enum name="CENTER" value="17" />
+            <enum name="LEFT" value="3" />
+            <enum name="RIGHT" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <!-- BaseIndicatorBanner -->
+    <declare-styleable name="BaseIndicatorBanner">
+        <!-- 设置指示器样式 -->
+        <attr name="bb_indicatorStyle" format="enum">
+            <!--图片资源-->
+            <enum name="DRAWABLE_RESOURCE" value="0" />
+            <!--矩形-->
+            <enum name="CORNER_RECTANGLE" value="1" />
+        </attr>
+        <!-- 设置指示器宽度,单位dp,默认6dp -->
+        <attr name="bb_indicatorWidth" format="dimension" />
+        <!-- 设置指示器高度,单位dp,默认6dp -->
+        <attr name="bb_indicatorHeight" format="dimension" />
+        <!-- 设置指示器间距,单位dp,默认6dp -->
+        <attr name="bb_indicatorGap" format="dimension" />
+        <!-- 设置指示器选中颜色,默认"#ffffff" -->
+        <attr name="bb_indicatorSelectColor" format="color" />
+        <!-- 设置指示器未选中颜色,默认"#88ffffff"  -->
+        <attr name="bb_indicatorUnselectColor" format="color" />
+        <!-- 设置指示器圆角弧度,单位dp,默认3dp -->
+        <attr name="bb_indicatorCornerRadius" format="dimension" />
+        <!-- 设置指示器选中drawable资源 -->
+        <attr name="bb_indicatorSelectRes" format="reference" />
+        <!-- 设置指示器未选中drawable资源 -->
+        <attr name="bb_indicatorUnselectRes" format="reference" />
+    </declare-styleable>
+
+    <!--FlowTagLayout-->
+    <declare-styleable name="FlowTagLayout">
+        <!--选择模式，默认不可选-->
+        <attr name="ftl_check_mode" format="enum">
+            <!--不可选择-->
+            <enum name="none" value="0" />
+            <!--单选-->
+            <enum name="single" value="1" />
+            <!--多选-->
+            <enum name="multi" value="2" />
+            <!--只是展示-->
+            <enum name="display" value="3" />
+        </attr>
+        <attr name="ftl_entries" format="reference" />
+        <attr name="ftl_selecteds" format="reference" />
+    </declare-styleable>
+
+    <!--=====================================================================-->
+
+    <!--===============================TextView======================================-->
+    <!-- MarqueeView -->
+    <declare-styleable name="MarqueeView">
+        <!--翻页的间隔-->
+        <attr name="mq_interval" format="integer" />
+        <!--动画的间隔-->
+        <attr name="mq_animDuration" format="integer" />
+        <!--动画的样式资源-->
+        <attr name="mq_animIn" format="reference" />
+        <attr name="mq_animOut" format="reference" />
+    </declare-styleable>
+
+    <!-- MarqueeTextView -->
+    <declare-styleable name="MarqueeTextView">
+        <!--尺寸是否自适应， 默认false-->
+        <attr name="mtv_isAutoFit" format="boolean" />
+        <!--控件是否自动显示与隐藏（根据显示数量）， 默认false-->
+        <attr name="mtv_isAutoDisplay" format="boolean" />
+    </declare-styleable>
+
+    <!--ExpandableTextView-->
+    <declare-styleable name="ExpandableTextView">
+        <!--最大收缩展示的行数，默认8行-->
+        <attr name="etv_maxCollapsedLines" format="integer" />
+        <!--动画持续的间隔，默认300ms-->
+        <attr name="etv_animDuration" format="integer" />
+        <!--动画开始时的透明度，默认0.7f-->
+        <attr name="etv_animAlphaStart" format="float" />
+        <!--伸展箭头的资源-->
+        <attr name="etv_expandDrawable" format="reference" />
+        <!--收缩箭头的资源-->
+        <attr name="etv_collapseDrawable" format="reference" />
+    </declare-styleable>
+
+    <!--LabelView-->
+    <declare-styleable name="LabelView">
+        <!--距离对角的距离-->
+        <attr name="label_distance" format="dimension" />
+        <!--标签的宽度-->
+        <attr name="label_height" format="dimension" />
+        <!--标签的背景颜色-->
+        <attr name="label_backgroundColor" format="color" />
+        <!--标签的边框宽度-->
+        <attr name="label_strokeWidth" format="dimension" />
+        <!--标签的边框颜色-->
+        <attr name="label_strokeColor" format="color" />
+        <!--标签的文字-->
+        <attr name="label_text" format="string" />
+        <!--标签的文字大小-->
+        <attr name="label_textSize" format="dimension" />
+        <!--标签的文字样式-->
+        <attr name="label_textStyle" format="enum">
+            <enum name="NORMAL" value="0" />
+            <enum name="BOLD" value="1" />
+            <enum name="ITALIC" value="2" />
+            <enum name="BOLD_ITALIC" value="3" />
+        </attr>
+        <!--标签的字体样式-->
+        <attr name="label_textFont" format="string" />
+        <!--标签的文字颜色-->
+        <attr name="label_textColor" format="color" />
+        <!--标签是否可见-->
+        <attr name="label_visual" format="boolean" />
+        <!--标签的对齐方式-->
+        <attr name="label_orientation" format="enum">
+            <enum name="LEFT_TOP" value="1" />
+            <enum name="RIGHT_TOP" value="2" />
+            <enum name="LEFT_BOTTOM" value="3" />
+            <enum name="RIGHT_BOTTOM" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <!--SuperTextView-->
+    <declare-styleable name="SuperTextView">
+
+        <!-- 文字字符串 -->
+        <attr name="sLeftTextString" format="string" />
+        <attr name="sLeftTopTextString" format="string" />
+        <attr name="sLeftBottomTextString" format="string" />
+
+        <attr name="sCenterTextString" format="string" />
+        <attr name="sCenterTopTextString" format="string" />
+        <attr name="sCenterBottomTextString" format="string" />
+
+        <attr name="sRightTextString" format="string" />
+        <attr name="sRightTopTextString" format="string" />
+        <attr name="sRightBottomTextString" format="string" />
+
+        <!-- 文字颜色 -->
+        <attr name="sLeftTextColor" format="color" />
+        <attr name="sLeftTopTextColor" format="color" />
+        <attr name="sLeftBottomTextColor" format="color" />
+
+        <attr name="sCenterTextColor" format="color" />
+        <attr name="sCenterTopTextColor" format="color" />
+        <attr name="sCenterBottomTextColor" format="color" />
+
+        <attr name="sRightTextColor" format="color" />
+        <attr name="sRightTopTextColor" format="color" />
+        <attr name="sRightBottomTextColor" format="color" />
+
+        <!-- 字体大小 -->
+
+        <attr name="sLeftTextSize" format="dimension" />
+        <attr name="sLeftTopTextSize" format="dimension" />
+        <attr name="sLeftBottomTextSize" format="dimension" />
+
+        <attr name="sCenterTextSize" format="dimension" />
+        <attr name="sCenterTopTextSize" format="dimension" />
+        <attr name="sCenterBottomTextSize" format="dimension" />
+
+        <attr name="sRightTextSize" format="dimension" />
+        <attr name="sRightTopTextSize" format="dimension" />
+        <attr name="sRightBottomTextSize" format="dimension" />
+
+        <!-- 文字显示行数 -->
+        <attr name="sLeftTopLines" format="integer" />
+        <attr name="sLeftLines" format="integer" />
+        <attr name="sLeftBottomLines" format="integer" />
+
+        <attr name="sCenterTopLines" format="integer" />
+        <attr name="sCenterLines" format="integer" />
+        <attr name="sCenterBottomLines" format="integer" />
+
+        <attr name="sRightTopLines" format="integer" />
+        <attr name="sRightLines" format="integer" />
+        <attr name="sRightBottomLines" format="integer" />
+        <!-- 文字显示个数 -->
+
+        <attr name="sLeftTopMaxEms" format="integer" />
+        <attr name="sLeftMaxEms" format="integer" />
+        <attr name="sLeftBottomMaxEms" format="integer" />
+
+        <attr name="sCenterTopMaxEms" format="integer" />
+        <attr name="sCenterMaxEms" format="integer" />
+        <attr name="sCenterBottomMaxEms" format="integer" />
+
+        <attr name="sRightTopMaxEms" format="integer" />
+        <attr name="sRightMaxEms" format="integer" />
+        <attr name="sRightBottomMaxEms" format="integer" />
+        <!-- 文字对齐方式 -->
+        <attr name="sLeftViewGravity" format="enum">
+            <enum name="left_center" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right_center" value="2" />
+        </attr>
+        <attr name="sCenterViewGravity" format="enum">
+            <enum name="left_center" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right_center" value="2" />
+        </attr>
+        <attr name="sRightViewGravity" format="enum">
+            <enum name="left_center" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right_center" value="2" />
+        </attr>
+        <!-- drawable资源 -->
+        <attr name="sLeftTvDrawableLeft" format="reference" />
+        <attr name="sLeftTvDrawableRight" format="reference" />
+
+        <attr name="sCenterTvDrawableLeft" format="reference" />
+        <attr name="sCenterTvDrawableRight" format="reference" />
+
+        <attr name="sRightTvDrawableLeft" format="reference" />
+        <attr name="sRightTvDrawableRight" format="reference" />
+
+        <!--drawable的宽度-->
+        <attr name="sLeftTvDrawableWidth" format="dimension" />
+        <attr name="sLeftTvDrawableHeight" format="dimension" />
+
+        <attr name="sCenterTvDrawableWidth" format="dimension" />
+        <attr name="sCenterTvDrawableHeight" format="dimension" />
+
+        <attr name="sRightTvDrawableWidth" format="dimension" />
+        <attr name="sRightTvDrawableHeight" format="dimension" />
+
+        <!--  TextView的drawable对应的Padding -->
+        <attr name="sTextViewDrawablePadding" format="dimension" />
+        <!-- 左边textView的宽度 为了中间文字左对齐的时候使用 -->
+        <attr name="sLeftViewWidth" format="dimension" />
+        <!-- 分割线的Margin -->
+        <attr name="sTopDividerLineMarginLR" format="dimension" />
+        <attr name="sTopDividerLineMarginLeft" format="dimension" />
+        <attr name="sTopDividerLineMarginRight" format="dimension" />
+
+        <attr name="sBottomDividerLineMarginLR" format="dimension" />
+        <attr name="sBottomDividerLineMarginLeft" format="dimension" />
+        <attr name="sBottomDividerLineMarginRight" format="dimension" />
+        <!-- 分割线 -->
+        <attr name="sDividerLineColor" format="color" />
+        <attr name="sDividerLineHeight" format="dimension" />
+        <attr name="sDividerLineType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="top" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="both" value="3" />
+        </attr>
+        <!-- view的Margin -->
+        <attr name="sLeftViewMarginLeft" format="dimension" />
+        <attr name="sLeftViewMarginRight" format="dimension" />
+        <attr name="sCenterViewMarginLeft" format="dimension" />
+        <attr name="sCenterViewMarginRight" format="dimension" />
+        <attr name="sRightViewMarginLeft" format="dimension" />
+        <attr name="sRightViewMarginRight" format="dimension" />
+        <!-- 文字是否加粗 -->
+        <attr name="sLeftTopTextIsBold" format="boolean" />
+        <attr name="sLeftTextIsBold" format="boolean" />
+        <attr name="sLeftBottomTextIsBold" format="boolean" />
+
+        <attr name="sCenterTopTextIsBold" format="boolean" />
+        <attr name="sCenterTextIsBold" format="boolean" />
+        <attr name="sCenterBottomTextIsBold" format="boolean" />
+
+        <attr name="sRightTopTextIsBold" format="boolean" />
+        <attr name="sRightTextIsBold" format="boolean" />
+        <attr name="sRightBottomTextIsBold" format="boolean" />
+
+        <attr name="sLeftTextBackground" format="reference" />
+        <attr name="sCenterTextBackground" format="reference" />
+        <attr name="sRightTextBackground" format="reference" />
+
+        <!-- 图片资源 -->
+
+        <attr name="sLeftIconRes" format="reference" />
+        <attr name="sRightIconRes" format="reference" />
+
+        <attr name="sLeftIconWidth" format="dimension" />
+        <attr name="sLeftIconHeight" format="dimension" />
+
+        <attr name="sRightIconWidth" format="dimension" />
+        <attr name="sRightIconHeight" format="dimension" />
+
+        <!--上中下三行文字的间距-->
+        <attr name="sCenterSpaceHeight" format="dimension" />
+
+        <attr name="sLeftIconMarginLeft" format="dimension" />
+        <attr name="sRightIconMarginRight" format="dimension" />
+
+        <attr name="sRightViewType" format="enum">
+            <enum name="checkbox" value="0" />
+            <enum name="switchBtn" value="1" />
+        </attr>
+
+        <!--中间是否可编辑，默认false-->
+        <attr name="sEnableEdit" format="boolean"/>
+        <attr name="sEditBackGround" format="reference"/>
+        <!--MATCH_PARENT=-1(默认), WRAP_CONTENT=-2-->
+        <attr name="sEditTextWidth" format="dimension"/>
+        <attr name="sEditTextString" format="string"/>
+        <!--输入框的提示信息-->
+        <attr name="sEditTextHint" format="string"/>
+        <!--是否支持清空按钮，默认true-->
+        <attr name="sEditTextClearButton" format="boolean"/>
+        <attr name="android:inputType" />
+
+        <!--CheckBox-->
+        <attr name="sRightCheckBoxRes" format="reference" />
+        <attr name="sRightCheckBoxMarginRight" format="dimension" />
+        <attr name="sIsChecked" format="boolean" />
+
+        <attr name="sRightSwitchMarginRight" format="dimension" />
+        <attr name="sSwitchIsChecked" format="boolean" />
+
+        <attr name="sTextOff" format="string" />
+        <attr name="sTextOn" format="string" />
+
+        <attr name="sSwitchMinWidth" format="dimension" />
+        <attr name="sSwitchPadding" format="dimension" />
+        <attr name="sThumbTextPadding" format="dimension" />
+
+        <attr name="sThumbResource" format="reference" />
+        <attr name="sTrackResource" format="reference" />
+
+        <!--是否开启点击出现水波效果-->
+        <attr name="sUseRipple" format="boolean" />
+
+        <attr name="sBackgroundDrawableRes" format="reference" />
+
+        <!--是否使用shape设置圆角及触摸反馈 设为true之后才能使用以下属性-->
+        <attr name="sUseShape" format="boolean" />
+        <!--  填充色-->
+
+        <attr name="sShapeSolidColor" format="color" />
+
+        <attr name="sShapeSelectorPressedColor" format="color" />
+        <attr name="sShapeSelectorNormalColor" format="color" />
+
+        <!-- 圆角半径 -->
+        <attr name="sShapeCornersRadius" format="dimension" />
+
+        <attr name="sShapeCornersTopLeftRadius" format="dimension" />
+        <attr name="sShapeCornersTopRightRadius" format="dimension" />
+        <attr name="sShapeCornersBottomLeftRadius" format="dimension" />
+        <attr name="sShapeCornersBottomRightRadius" format="dimension" />
+
+        <!--边框宽度-->
+        <attr name="sShapeStrokeWidth" format="dimension" />
+        <attr name="sShapeStrokeDashWidth" format="dimension" />
+        <attr name="sShapeStrokeDashGap" format="dimension" />
+        <attr name="sShapeStrokeColor" format="color" />
+
+    </declare-styleable>
 </resources>

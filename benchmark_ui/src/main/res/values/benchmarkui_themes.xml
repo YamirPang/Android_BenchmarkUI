@@ -77,8 +77,6 @@
 
         <item name="benchmarkui_config_content_spacing_horizontal">@dimen/benchmarkui_config_content_spacing_horizontal_phone</item>
         <item name="benchmarkui_config_content_spacing_vertical">@dimen/benchmarkui_config_content_spacing_vertical_phone</item>
-        <item name="benchmarkui_config_simple_list_item_height">@dimen/benchmarkui_config_simple_list_item_height_phone</item>
-        <item name="benchmarkui_config_simple_list_icon_size">@dimen/benchmarkui_config_simple_list_icon_size_phone</item>
         <item name="benchmarkui_config_separator_height">@dimen/benchmarkui_config_separator_height_phone</item>
     </style>
 

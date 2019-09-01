@@ -16,6 +16,8 @@ import com.zealp.benchmark_ui.module.me.iwf.photopicker.event.OnItemCheckListene
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.event.OnPhotoClickListener;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.MediaStoreHelper;
+import com.zealp.benchmark_ui.utils.GlideApp;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -94,20 +96,15 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
 
     @Override
     public void onBindViewHolder(final PhotoViewHolder holder, int position) {
-
         if (getItemViewType(position) == ITEM_TYPE_PHOTO) {
-
             List<Photo> photos = getCurrentPhotos();
             final Photo photo;
-
             if (showCamera()) {
                 photo = photos.get(position - 1);
             } else {
                 photo = photos.get(position);
             }
-
             boolean canLoadImage = AndroidLifecycleUtils.canLoadImage(holder.ivPhoto.getContext());
-
             if (canLoadImage) {
 //                final RequestOptions options = new RequestOptions();
 //                options.centerCrop()
@@ -120,25 +117,20 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
 //                        .load(new File(photo.getPath()))
 //                        .thumbnail(0.5f)
 //                        .into(holder.ivPhoto);
-
-                Glide
+                GlideApp
                         .with(holder.ivPhoto.getContext())
                         .load(new File(photo.getPath()))
-                        .asBitmap()
+//                        .asBitmap()
                         .dontAnimate()
                         .override(imageSize, imageSize)
                         .placeholder(R.drawable.__picker_ic_photo_black_48dp)
                         .error(R.drawable.__picker_ic_broken_image_black_48dp)
                         .thumbnail(0.5f)
                         .into(holder.ivPhoto);
-
             }
-
             final boolean isChecked = isSelected(photo);
-
             holder.vSelected.setSelected(isChecked);
             holder.ivPhoto.setSelected(isChecked);
-
             holder.ivPhoto.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -168,7 +160,6 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
                     }
                 }
             });
-
         } else {
             holder.ivPhoto.setImageResource(R.drawable.__picker_camera);
         }
@@ -236,7 +227,7 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
     @Override
     public void onViewRecycled(PhotoViewHolder holder) {
 //        glide.clear(holder.ivPhoto);
-        Glide.clear(holder.ivPhoto);
+        GlideApp.with(holder.itemView).clear(holder.ivPhoto);
         super.onViewRecycled(holder);
     }
 }

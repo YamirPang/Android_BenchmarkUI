@@ -8,11 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
-
+import com.zealp.benchmark_ui.utils.GlideApp;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,10 +58,10 @@ public class PhotoPagerAdapter extends PagerAdapter {
 //                    .thumbnail(0.1f)
 //                    .into(imageView);
 
-            Glide
+            GlideApp
                     .with(context)
                     .load(uri)
-                    .asBitmap()
+//                    .asBitmap()
                     .dontAnimate()
                     .override(800, 800)
                     .placeholder(R.drawable.__picker_ic_photo_black_48dp)
@@ -103,8 +102,8 @@ public class PhotoPagerAdapter extends PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
-//        mGlide.clear((View) object);
-        Glide.clear((View) object);
+//        Glide.clear((View) object);
+        GlideApp.with(container.getContext()).clear((View) object);
     }
 
     @Override

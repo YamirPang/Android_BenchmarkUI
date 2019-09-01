@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.bumptech.glide.Glide;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
+import com.zealp.benchmark_ui.utils.GlideApp;
 import com.zealp.benchmarkui.R;
 import java.io.File;
 import java.util.ArrayList;
@@ -57,25 +57,17 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
 
         if (getItemViewType(position) == TYPE_PHOTO) {
             Uri uri = Uri.fromFile(new File(photoPaths.get(position)));
-
             boolean canLoadImage = AndroidLifecycleUtils.canLoadImage(holder.ivPhoto.getContext());
-
             if (canLoadImage) {
-
-//                final RequestOptions options = new RequestOptions();
-//
-//                options.centerCrop()
-//                        .placeholder(R.drawable.__picker_ic_photo_black_48dp)
-//                        .error(R.drawable.__picker_ic_broken_image_black_48dp);
-
-                Glide.with(mContext)
-                        .load(uri)
+                GlideApp
+                        .with(holder.itemView.getContext())
                         .asBitmap()
+                        .load(uri)
                         .placeholder(R.drawable.__picker_ic_photo_black_48dp)
                         .error(R.drawable.__picker_ic_broken_image_black_48dp)
                         .thumbnail(0.1f)
+                        .dontAnimate()
                         .into(holder.ivPhoto);
-
             }
         }
     }
