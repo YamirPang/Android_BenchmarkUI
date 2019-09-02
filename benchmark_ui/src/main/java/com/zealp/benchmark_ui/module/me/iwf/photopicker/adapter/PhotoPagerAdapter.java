@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.RequestManager;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

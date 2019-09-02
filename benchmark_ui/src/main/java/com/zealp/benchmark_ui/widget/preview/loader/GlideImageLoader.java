@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.module.AppGlideModule;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 
 /**
  * Glide 图片加载

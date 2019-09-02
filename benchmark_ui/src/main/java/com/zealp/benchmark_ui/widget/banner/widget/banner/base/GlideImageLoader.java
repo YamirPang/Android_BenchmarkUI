@@ -19,7 +19,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 
 /**
  * Glide 图片加载

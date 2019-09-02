@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.entity.PhotoDirectory;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 
 import java.util.ArrayList;
 import java.util.List;

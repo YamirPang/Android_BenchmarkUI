@@ -16,7 +16,7 @@ import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.zealp.benchmark_ui.R;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 
 /**
  * Glide多媒体加载

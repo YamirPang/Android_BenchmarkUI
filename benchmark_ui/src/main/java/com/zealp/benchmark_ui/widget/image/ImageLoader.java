@@ -4,13 +4,11 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
-
-import com.bumptech.glide.GenericTransitionOptions;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zealp.benchmark_ui.utils.GlideApp;
-import com.zealp.benchmark_ui.utils.GlideRequest;
+import com.zealp.benchmark_ui.GlideApp;
+import com.zealp.benchmark_ui.GlideRequest;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.GrayscaleTransformation;

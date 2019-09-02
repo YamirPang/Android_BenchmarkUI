@@ -1,4 +1,4 @@
-package com.zealp.benchmark_ui.utils;
+package com.zealp.benchmark_ui;
 
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;
@@ -9,5 +9,5 @@ import com.bumptech.glide.module.AppGlideModule;
  * Created On: 2019/6/26
  */
 @GlideModule
-public class CustomGlideModule extends AppGlideModule {
+public class LibAppGlideModule extends AppGlideModule {
 }

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
-import com.zealp.benchmark_ui.utils.GlideApp;
+import com.zealp.benchmark_ui.GlideApp;
 import com.zealp.benchmarkui.R;
 import java.io.File;
 import java.util.ArrayList;
