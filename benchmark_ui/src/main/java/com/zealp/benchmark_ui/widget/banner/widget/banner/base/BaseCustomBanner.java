@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.zealp.benchmark_ui.R;
 import com.zealp.benchmark_ui.config.UILog;
+import com.zealp.benchmark_ui.widget.banner.widget.RoundRectLayout;
 import com.zealp.benchmark_ui.widget.banner.widget.loopviewpager.FixedSpeedScroller;
 import com.zealp.benchmark_ui.widget.banner.widget.loopviewpager.LoopViewPager;
 
@@ -207,18 +208,28 @@ public abstract class BaseCustomBanner<E, T extends BaseCustomBanner<E, T>> exte
             mItemHeight = (int) (mItemWidth * scale);
         }
 
-        LayoutParams lp = new LayoutParams(mItemWidth, mItemHeight);
-        LayoutParams viewPagerLayoutParams = new LayoutParams(mItemWidth, mItemHeight);
+        LayoutParams lp = new LayoutParams(mItemWidth, ViewGroup.LayoutParams.MATCH_PARENT);
+        lp.setMargins(30, 30, 30, 30);
+
+        LayoutParams viewPagerLayoutParams = new LayoutParams(mItemWidth, ViewGroup.LayoutParams.MATCH_PARENT);
 //        viewPagerLayoutParams.setMargins(30, 30, 30, 30);
         mViewPager.setLayoutParams(viewPagerLayoutParams);
-        mViewPager.setPadding(10, 5, 10,5);
-        addView(mViewPager, lp);
+//        mViewPager.setPadding(dp2px(10), dp2px(5), dp2px(10),dp2px(5));
+//        addView(mViewPager, lp);
 
         //top parent of indicators
-        mRlBottomBarParent = new RelativeLayout(context);
+        mRlBottomBarParent = new RoundRectLayout(context);
+//        mRlBottomBarParent.setPadding(dp2px(10), dp2px(5), dp2px(10),dp2px(5));
 //            mRlBottomBarParent.setBackgroundColor(Color.parseColor("#000000"));
-        mRlBottomBarParent.setBackgroundResource(R.drawable.benchmarkui_banner_relative);
+//        mRlBottomBarParent.setBackgroundResource(R.drawable.benchmarkui_banner_relative);
         addView(mRlBottomBarParent, lp);
+
+        View view = new View(context);
+        view.setAlpha(0.5f);
+        view.setBackgroundResource(R.drawable.benchmarkui_banner_relative);
+
+        mRlBottomBarParent.addView(mViewPager, viewPagerLayoutParams);
+        mRlBottomBarParent.addView(view, viewPagerLayoutParams);
 
         //container of indicators and title
         mLlBottomBar = new LinearLayout(context);

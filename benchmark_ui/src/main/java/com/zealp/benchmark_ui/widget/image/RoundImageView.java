@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 public class RoundImageView extends ImageView {
 
-
     float width, height;
 
     public RoundImageView(Context context) {
@@ -55,7 +54,6 @@ public class RoundImageView extends ImageView {
             path.quadTo(0, height, 0, height - 12);
             path.lineTo(0, 12);
             path.quadTo(0, 0, 12, 0);
-
             canvas.clipPath(path);
         }
         super.onDraw(canvas);

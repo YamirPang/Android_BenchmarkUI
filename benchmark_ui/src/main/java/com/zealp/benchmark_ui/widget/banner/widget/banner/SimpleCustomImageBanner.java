@@ -39,7 +39,8 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
     /**
      * 高／宽比率
      */
-    private double mScale = 0.5625D;
+//    private double mScale = 0.5625D;
+    private double mScale = 0.4D;
 
     private ImageLoader mImageLoader;
 
@@ -95,12 +96,11 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
      * @param item
      */
     protected void loadingImageView(ImageView iv, BannerItem item) {
-        int itemWidth = mDisplayMetrics.widthPixels;
+        int itemWidth = mDisplayMetrics.widthPixels - 50;
         int itemHeight = (int) (itemWidth * mScale);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(itemWidth , LinearLayout.LayoutParams.MATCH_PARENT);
-//        lp.setMargins(10, 0, 10, 0);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(itemWidth, LinearLayout.LayoutParams.MATCH_PARENT);
         iv.setLayoutParams(lp);
-//        iv.setScaleType(ImageView.ScaleType.);
+        iv.setScaleType(ImageView.ScaleType.FIT_XY);
 
         if (!TextUtils.isEmpty(item.imgUrl)) {
             String imgUrl = item.imgUrl;
@@ -111,7 +111,6 @@ public class SimpleCustomImageBanner extends BaseCustomIndicatorBanner<BannerIte
             } else {
                 iv.setImageDrawable(mColorDrawable);
             }
-
         } else if (item.imgRes != 0) {
             getImageLoader().displayImage(mContext, item.imgRes, iv,
                     itemWidth, itemHeight, mColorDrawable,
