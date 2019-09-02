@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-fragment:27.1.0"
+        resolutionStrategy.force "com.android.support:animated-vector-drawable:27.1.0"
+    }
 }
 
 dependencies {
