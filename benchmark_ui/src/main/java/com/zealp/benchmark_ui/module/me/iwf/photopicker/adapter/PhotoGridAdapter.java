@@ -16,7 +16,6 @@ import com.zealp.benchmark_ui.module.me.iwf.photopicker.event.OnItemCheckListene
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.event.OnPhotoClickListener;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.AndroidLifecycleUtils;
 import com.zealp.benchmark_ui.module.me.iwf.photopicker.utils.MediaStoreHelper;
-import com.zealp.benchmark_ui.GlideApp;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -116,7 +115,7 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
 //                        .load(new File(photo.getPath()))
 //                        .thumbnail(0.5f)
 //                        .into(holder.ivPhoto);
-                GlideApp
+                Glide
                         .with(holder.ivPhoto.getContext())
                         .load(new File(photo.getPath()))
 //                        .asBitmap()
@@ -225,8 +224,8 @@ public class PhotoGridAdapter extends SelectableAdapter<PhotoGridAdapter.PhotoVi
 
     @Override
     public void onViewRecycled(PhotoViewHolder holder) {
-//        glide.clear(holder.ivPhoto);
-        GlideApp.with(holder.itemView).clear(holder.ivPhoto);
+        Glide.clear(holder.ivPhoto);
+//        Glide.with(holder.itemView).clear(holder.ivPhoto);
         super.onViewRecycled(holder);
     }
 }

@@ -4,12 +4,12 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.bumptech.glide.GenericRequestBuilder;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zealp.benchmark_ui.GlideApp;
-import com.zealp.benchmark_ui.GlideRequest;
-
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.GrayscaleTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
@@ -152,33 +152,33 @@ public class ImageLoader {
                      Drawable errorImage, boolean isCropCircle, boolean isRoundedCorners, boolean isGrayscale, int radius) {
 
         //处理选项设置和开始一般resource类型资源的加载
-
-        GlideRequest genericRequestBuilder = null;
+        GenericRequestBuilder genericRequestBuilder = null;
 
         // 是否切成圆形
         if (isCropCircle) {
-            genericRequestBuilder = GlideApp.with(context).load(imgUrl).transform(new CropCircleTransformation(context));
+            genericRequestBuilder = Glide.with(context).load(imgUrl)
+                    .bitmapTransform(new CropCircleTransformation(context));
         }
         //是否切成圆角
         if (isRoundedCorners) {
-            genericRequestBuilder = GlideApp.with(context).load(imgUrl)
-                    .transform(new RoundedCornersTransformation(context, radius, 0, RoundedCornersTransformation.CornerType.ALL));
+            genericRequestBuilder = Glide.with(context).load(imgUrl)
+                    .bitmapTransform(new RoundedCornersTransformation(context, radius, 0, RoundedCornersTransformation.CornerType.ALL));
         }
         //是否做灰度处理
         if (isGrayscale) {
-            genericRequestBuilder = GlideApp.with(context).load(imgUrl)
-                    .transform(new GrayscaleTransformation(context));
+            genericRequestBuilder = Glide.with(context).load(imgUrl)
+                    .bitmapTransform(new GrayscaleTransformation(context));
         }
         //不做glide-transformations处理
         if (!isCropCircle && !isRoundedCorners && !isGrayscale) {
-            genericRequestBuilder = GlideApp.with(context).load(imgUrl);
+            genericRequestBuilder = Glide.with(context).load(imgUrl);
         }
 
         //处理选项，加载图片
         if (genericRequestBuilder == null) {
             return;
         }
-        genericRequestBuilder.diskCacheStrategy(DiskCacheStrategy.ALL)
+        genericRequestBuilder.diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .placeholder(defaultImage)
                 .priority(Priority.NORMAL)
                 .error(errorImage)
@@ -225,7 +225,8 @@ public class ImageLoader {
      * @lastModify 2017年2月18日
      */
     public void clearViewCache(View view) {
-        GlideApp.with(view).clear(view);
+        Glide.clear(view);
+//        Glide.with(view).clear(view);
     }
 
     /**

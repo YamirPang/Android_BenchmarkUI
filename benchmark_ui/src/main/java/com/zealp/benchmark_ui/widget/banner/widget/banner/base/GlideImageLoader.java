@@ -18,8 +18,9 @@ package com.zealp.benchmark_ui.widget.banner.widget.banner.base;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.zealp.benchmark_ui.GlideApp;
 
 /**
  * Glide 图片加载
@@ -37,8 +38,7 @@ public class GlideImageLoader implements ImageLoader {
      */
     @Override
     public void displayImage(Context context, Object path, ImageView imageView) {
-        GlideApp.with(context)
-                .asBitmap()
+        Glide.with(context)
                 .load(path)
                 .into(imageView);
     }
@@ -56,6 +56,6 @@ public class GlideImageLoader implements ImageLoader {
      */
     @Override
     public void displayImage(Context context, Object path, ImageView imageView, int width, int height, Drawable placeholder, DiskCacheStrategy strategy) {
-        GlideApp.with(context).asBitmap().load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
+        Glide.with(context).load(path).placeholder(placeholder).diskCacheStrategy(strategy).centerCrop().into(imageView);
     }
 }
