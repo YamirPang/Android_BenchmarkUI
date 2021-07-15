@@ -1,4 +1,4 @@
-# Android 开源UI库(Android Benchmark UI)
+# Android 开源UI库(Android Benchmark UI) -- 已停更
 
 Android开源版基础UI库
 
